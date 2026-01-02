@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boucherie Armoricaine — Abattage & Découpe à Lesneven</title>
+    <meta name="description" content="Boucherie Armoricaine à Lesneven (29) - Service d'abattage, découpe et transformation de viandes. Bœuf, porc, agneau, volaille. Tarifs professionnels.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Palette Bretagne + Boucherie */
+            --noir-breton: #0D0D0D;
+            --blanc-hermine: #FAF8F5;
+            --rouge-sang: #8B1E3F;
+            --rouge-clair: #A62B4E;
+            --or-cuivre: #C4956A;
+            --jaune-accent: #E5A83B;
+            --gris-ardoise: #1A1A1A;
+            --gris-pierre: #6B6B6B;
+            --gris-clair: #E8E8E8;
+            
+            /* Typographies */
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Source Sans 3', -apple-system, sans-serif;
+            
+            /* Espacements */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--blanc-hermine);
+            color: var(--noir-breton);
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: var(--noir-breton);
+            padding: var(--space-sm) var(--space-md);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .logo-icon {
+            width: 110px;
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-name {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--blanc-hermine);
+            line-height: 1.1;
+        }
+
+        .logo-tagline {
+            font-size: 1rem;
+            color: var(--jaune-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+        }
+
+        .nav a {
+            color: var(--blanc-hermine);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: var(--jaune-accent);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--noir-breton) 0%, var(--gris-ardoise) 100%);
+            padding: var(--space-xl) var(--space-md);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 30% 70%, rgba(139, 30, 63, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 30%, rgba(229, 168, 59, 0.08) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            background: rgba(229, 168, 59, 0.15);
+            border: 1px solid var(--jaune-accent);
+            padding: 0.5rem 1.2rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .hero-badge span {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--jaune-accent);
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            color: var(--blanc-hermine);
+            line-height: 1.15;
+            margin-bottom: var(--space-sm);
+        }
+
+        .hero h1 .accent {
+            color: var(--jaune-accent);
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            color: var(--gris-pierre);
+            max-width: 600px;
+            margin: 0 auto var(--space-md);
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: var(--space-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.8rem;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--rouge-sang);
+            color: var(--blanc-hermine);
+        }
+
+        .btn-primary:hover {
+            background: var(--rouge-clair);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 30, 63, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--blanc-hermine);
+            border: 1px solid var(--gris-pierre);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--jaune-accent);
+            color: var(--jaune-accent);
+        }
+
+        /* ===== SECTION PRÉSENTATION ===== */
+        .section {
+            padding: var(--space-xl) var(--space-md);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--rouge-sang);
+            margin-bottom: var(--space-xs);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: var(--noir-breton);
+        }
+
+        /* Présentation */
+        .presentation {
+            background: white;
+            padding: var(--space-lg);
+            border-left: 4px solid var(--jaune-accent);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            margin-bottom: var(--space-lg);
+        }
+
+        .presentation h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--noir-breton);
+            margin-bottom: var(--space-sm);
+        }
+
+        .presentation p {
+            color: var(--gris-pierre);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: var(--space-sm);
+        }
+
+        .presentation p:last-child {
+            margin-bottom: 0;
+        }
+
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        .service-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--blanc-hermine);
+            border: 1px solid var(--gris-clair);
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--noir-breton);
+        }
+
+        .service-tag svg {
+            color: var(--rouge-sang);
+        }
+
+        /* ===== SECTION TARIFS ===== */
+        .tarifs-section {
+            background: var(--noir-breton);
+            padding: var(--space-xl) var(--space-md);
+        }
+
+        .tarifs-section .section-header {
+            color: var(--blanc-hermine);
+        }
+
+        .tarifs-section .section-label {
+            color: var(--jaune-accent);
+        }
+
+        .tarifs-section .section-title {
+            color: var(--blanc-hermine);
+        }
+
+        .tarifs-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .tarif-card {
+            background: var(--gris-ardoise);
+            border: 1px solid rgba(255,255,255,0.08);
+            overflow: hidden;
+        }
+
+        .tarif-card-header {
+            background: linear-gradient(135deg, var(--rouge-sang) 0%, var(--rouge-clair) 100%);
+            padding: var(--space-sm) var(--space-md);
+        }
+
+        .tarif-card-header h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--blanc-hermine);
+        }
+
+        .tarif-card-header p {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 0.2rem;
+        }
+
+        .tarif-card-body {
+            padding: var(--space-md);
+        }
+
+        .tarif-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tarif-table thead th {
+            text-align: left;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--jaune-accent);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .tarif-table tbody td {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: var(--blanc-hermine);
+            font-size: 0.95rem;
+        }
+
+        .tarif-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tarif-table .produit {
+            font-weight: 500;
+        }
+
+        .tarif-table .prix {
+            text-align: right;
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--jaune-accent);
+        }
+
+        .tarif-note {
+            margin-top: var(--space-sm);
+            padding-top: var(--space-sm);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.8rem;
+            color: var(--gris-pierre);
+            font-style: italic;
+        }
+
+        /* Card spéciale PAD */
+        .tarif-card.highlight {
+            border-color: var(--jaune-accent);
+        }
+
+        .tarif-card.highlight .tarif-card-header {
+            background: linear-gradient(135deg, var(--jaune-accent) 0%, #d4952f 100%);
+        }
+
+        .tarif-card.highlight .tarif-card-header h3,
+        .tarif-card.highlight .tarif-card-header p {
+            color: var(--noir-breton);
+        }
+
+        /* ===== SECTION CONTACT ===== */
+        .contact-section {
+            background: white;
+        }
+
+        .contact-list {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--noir-breton);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--jaune-accent);
+        }
+
+        .contact-details h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--noir-breton);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-details p {
+            color: var(--gris-pierre);
+            font-size: 0.95rem;
+        }
+
+        .contact-details a {
+            color: var(--rouge-sang);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--noir-breton);
+            padding: var(--space-md) var(--space-md);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .footer-brand .logo-name {
+            font-size: 1.1rem;
+        }
+
+        .footer-info {
+            text-align: right;
+        }
+
+        .footer-info p {
+            font-size: 0.85rem;
+            color: var(--gris-pierre);
+        }
+
+        .footer-info .legal {
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .tarifs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: var(--space-xs) 0;
+            }
+
+            .logo-icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            .logo-tagline {
+                font-size: 0.75rem;
+            }
+
+            .nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: var(--noir-breton);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: var(--space-md);
+                transition: right 0.3s ease;
+                z-index: 1001;
+                border-left: 2px solid var(--jaune-accent);
+            }
+
+            .nav.active {
+                right: 0;
+            }
+
+            .nav a {
+                font-size: 1.3rem;
+            }
+
+            .menu-toggle {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                cursor: pointer;
+                z-index: 1002;
+                padding: 10px;
+            }
+
+            .menu-toggle span {
+                width: 28px;
+                height: 3px;
+                background: var(--blanc-hermine);
+                transition: all 0.3s ease;
+            }
+
+            .menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -6px);
+            }
+
+            .menu-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(0,0,0,0.5);
+                z-index: 1000;
+            }
+
+            .menu-overlay.active {
+                display: block;
+            }
+
+            .hero {
+                padding: var(--space-lg) var(--space-sm);
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section {
+                padding: var(--space-lg) var(--space-sm);
+            }
+
+            .tarifs-section {
+                padding: var(--space-lg) var(--space-sm);
+            }
+
+            .tarifs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .presentation {
+                padding: var(--space-md);
+            }
+
+            .presentation h2 {
+                font-size: 1.3rem;
+            }
+
+            .services-list {
+                justify-content: center;
+            }
+
+            .contact-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-item {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: var(--space-md);
+            }
+
+            .footer-brand {
+                justify-content: center;
+            }
+
+            .footer-info {
+                text-align: center;
+            }
+        }
+
+        /* Cacher le menu toggle sur desktop */
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu-overlay {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="logo-blanc.avif" alt="Logo Boucherie Armoricaine">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-tagline">Lesneven • Finistère</span>
+                </div>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="#presentation" onclick="closeMenu()">Présentation</a>
+                <a href="#tarifs" onclick="closeMenu()">Tarifs</a>
+                <a href="#contact" onclick="closeMenu()">Contact</a>
+            </nav>
+            <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>✦ Artisan Boucher en Bretagne</span>
+            </div>
+            <h1>Abattage & Découpe <br><span class="accent">sur mesure</span></h1>
+            <p class="hero-description">
+                Service professionnel d'abattage, découpe et transformation de viandes pour particuliers et éleveurs. Bœuf, porc, agneau, volaille — un travail artisanal de qualité.
+            </p>
+            <div class="hero-cta">
+                <a href="#tarifs" class="btn btn-primary">
+                    Voir nos tarifs
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRÉSENTATION -->
+    <section class="section" id="presentation">
+        <div class="presentation">
+            <h2>Notre savoir-faire à votre service</h2>
+            <p>
+                La <strong>Boucherie Armoricaine</strong> (SARL Kig Armor) vous propose un service complet d'abattage et de découpe de viandes à Lesneven, au cœur du Finistère. Que vous soyez éleveur ou particulier, nous transformons vos bêtes avec le savoir-faire artisanal breton.
+            </p>
+            <p>
+                Nous travaillons le bœuf, le veau, le porc, l'agneau et le chevreau. Chaque pièce est découpée selon vos souhaits, en frais ou sous vide pour une meilleure conservation.
+            </p>
+            <div class="services-list">
+                <span class="service-tag">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Découpe fraîche
+                </span>
+                <span class="service-tag">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Mise sous vide
+                </span>
+                <span class="service-tag">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Hachage
+                </span>
+                <span class="service-tag">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Saucisses & Merguez
+                </span>
+                <span class="service-tag">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Congélation
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARIFS -->
+    <section class="tarifs-section" id="tarifs">
+        <div class="section-header">
+            <p class="section-label">Grille tarifaire 2026</p>
+            <h2 class="section-title">Nos Tarifs (HT)</h2>
+        </div>
+
+        <div class="tarifs-grid">
+            <!-- Abattage / Découpe -->
+            <div class="tarif-card">
+                <div class="tarif-card-header">
+                    <h3>Abattage & Découpe</h3>
+                    <p>Prix au kg/carcasse</p>
+                </div>
+                <div class="tarif-card-body">
+                    <table class="tarif-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th style="text-align:right;">Frais</th>
+                                <th style="text-align:right;">Sous vide</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="produit">Bœuf / Veau</td>
+                                <td class="prix">1,80 €</td>
+                                <td class="prix">2,30 €</td>
+                            </tr>
+                            <tr>
+                                <td class="produit">Ovin / Caprin</td>
+                                <td class="prix">1,90 €</td>
+                                <td class="prix">2,40 €</td>
+                            </tr>
+                            <tr>
+                                <td class="produit">Porc (+40 kg)</td>
+                                <td class="prix">1,40 €</td>
+                                <td class="prix">1,90 €</td>
+                            </tr>
+                            <tr>
+                                <td class="produit">Porcelet</td>
+                                <td class="prix" colspan="2">41 € pièce (avec saumure)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Prestations supplémentaires -->
+            <div class="tarif-card">
+                <div class="tarif-card-header">
+                    <h3>Prestations supplémentaires</h3>
+                    <p>Prix au kg/produit fini</p>
+                </div>
+                <div class="tarif-card-body">
+                    <table class="tarif-table">
+                        <thead>
+                            <tr>
+                                <th>Prestation</th>
+                                <th style="text-align:right;">Tarif</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="produit">Hachage</td>
+                                <td class="prix">2,00 €/kg</td>
+                            </tr>
+                            <tr>
+                                <td class="produit">Saucisse, Chipolatas, Merguez</td>
+                                <td class="prix">4,00 €/kg</td>
+                            </tr>
+                            <tr>
+                                <td class="produit">Congélation</td>
+                                <td class="prix">1,00 €/kg</td>
+                            </tr>
+                            <tr>
+                                <td class="produit">Cartons</td>
+                                <td class="prix">1,00 €/pièce</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- PAD & Semi-Parée -->
+            <div class="tarif-card highlight">
+                <div class="tarif-card-header">
+                    <h3>Tarifs PAD & Semi-Parée</h3>
+                    <p>Bête entière ou demi-bête uniquement</p>
+                </div>
+                <div class="tarif-card-body">
+                    <table class="tarif-table">
+                        <thead>
+                            <tr>
+                                <th>Prestation</th>
+                                <th style="text-align:right;">Tarif</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="produit">
+                                    <strong>PAD</strong> (Prêt à Découper)<br>
+                                    <small style="color: var(--gris-pierre);">Dégraissée et dénervée</small>
+                                </td>
+                                <td class="prix">1,00 €/kg</td>
+                            </tr>
+                            <tr>
+                                <td class="produit">
+                                    <strong>SP</strong> (Semi-Paré)<br>
+                                    <small style="color: var(--gris-pierre);">Désossée, non dénervée, dégraissage sommaire</small>
+                                </td>
+                                <td class="prix">0,80 €/kg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="tarif-note">Prix HT au kg carcasse, hors frais d'abattage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+        <div class="section-header">
+            <p class="section-label">Nous trouver</p>
+            <h2 class="section-title">Contact</h2>
+        </div>
+
+        <div class="contact-list">
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                </div>
+                <div class="contact-details">
+                    <h4>Adresse</h4>
+                    <p>23 rue d'Arvor<br>29260 Lesneven</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                </div>
+                <div class="contact-details">
+                    <h4>Téléphone</h4>
+                    <p><a href="tel:0298210348">02 98 21 03 48</a></p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </div>
+                <div class="contact-details">
+                    <h4>Email</h4>
+                    <p><a href="mailto:contact@boucheriearmoricaine.com">contact@boucheriearmoricaine.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo-icon" style="width: 90px; height: 90px;">
+                    <img src="logo-blanc.avif" alt="Logo Boucherie Armoricaine">
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>SARL Kig Armor — 23 rue d'Arvor, 29260 Lesneven</p>
+                <p class="legal">© 2025 Boucherie Armoricaine. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav').classList.toggle('active');
+            document.getElementById('menuToggle').classList.toggle('active');
+            document.getElementById('menuOverlay').classList.toggle('active');
+            document.body.style.overflow = document.getElementById('nav').classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            document.getElementById('nav').classList.remove('active');
+            document.getElementById('menuToggle').classList.remove('active');
+            document.getElementById('menuOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
+
+</body>
+</html>
