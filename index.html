@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Palette Bretagne + Boucherie */
             --noir-breton: #0D0D0D;
             --blanc-hermine: #FAF8F5;
             --rouge-sang: #8B1E3F;
@@ -21,11 +20,9 @@
             --gris-pierre: #6B6B6B;
             --gris-clair: #E8E8E8;
             
-            /* Typographies */
             --font-display: 'Playfair Display', Georgia, serif;
             --font-body: 'Source Sans 3', -apple-system, sans-serif;
             
-            /* Espacements */
             --space-xs: 0.5rem;
             --space-sm: 1rem;
             --space-md: 2rem;
@@ -45,14 +42,14 @@
 
         body {
             font-family: var(--font-body);
-            background-color: var(--blanc-hermine);
-            color: var(--noir-breton);
+            background-color: var(--noir-breton);
+            color: var(--blanc-hermine);
             line-height: 1.6;
         }
 
-        /* ===== HEADER ===== */
+        /* ===== HEADER BLANC ===== */
         .header {
-            background: var(--noir-breton);
+            background: var(--blanc-hermine);
             padding: var(--space-sm) var(--space-md);
             position: sticky;
             top: 0;
@@ -97,13 +94,13 @@
             font-family: var(--font-display);
             font-size: 1.4rem;
             font-weight: 700;
-            color: var(--blanc-hermine);
+            color: var(--noir-breton);
             line-height: 1.1;
         }
 
         .logo-tagline {
             font-size: 1rem;
-            color: var(--jaune-accent);
+            color: var(--rouge-sang);
             text-transform: uppercase;
             letter-spacing: 0.15em;
             font-weight: 500;
@@ -112,41 +109,45 @@
         .nav {
             display: flex;
             gap: var(--space-lg);
+            align-items: center;
         }
 
         .nav a {
-            color: var(--blanc-hermine);
+            color: var(--noir-breton);
             text-decoration: none;
             font-size: 1.1rem;
             font-weight: 500;
             letter-spacing: 0.03em;
             transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--rouge-sang);
+            transition: width 0.3s ease;
         }
 
         .nav a:hover {
-            color: var(--jaune-accent);
+            color: var(--rouge-sang);
         }
 
-        /* ===== HERO ===== */
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== HERO BLANC ===== */
         .hero {
-            background: linear-gradient(135deg, var(--noir-breton) 0%, var(--gris-ardoise) 100%);
+            background: var(--blanc-hermine);
             padding: var(--space-xl) var(--space-md);
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(ellipse at 30% 70%, rgba(139, 30, 63, 0.1) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 30%, rgba(229, 168, 59, 0.08) 0%, transparent 40%);
-            pointer-events: none;
         }
 
         .hero-content {
@@ -159,10 +160,9 @@
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: var(--space-xs);
-            background: rgba(229, 168, 59, 0.15);
-            border: 1px solid var(--jaune-accent);
-            padding: 0.5rem 1.2rem;
+            gap: 0.6rem;
+            background: var(--noir-breton);
+            padding: 0.6rem 1.4rem;
             margin-bottom: var(--space-md);
         }
 
@@ -171,20 +171,20 @@
             font-weight: 600;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: var(--jaune-accent);
+            color: var(--blanc-hermine);
         }
 
         .hero h1 {
             font-family: var(--font-display);
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 900;
-            color: var(--blanc-hermine);
+            color: var(--noir-breton);
             line-height: 1.15;
             margin-bottom: var(--space-sm);
         }
 
         .hero h1 .accent {
-            color: var(--jaune-accent);
+            color: var(--rouge-sang);
         }
 
         .hero-description {
@@ -229,17 +229,15 @@
         }
 
         .btn-secondary {
-            background: transparent;
+            background: var(--noir-breton);
             color: var(--blanc-hermine);
-            border: 1px solid var(--gris-pierre);
         }
 
         .btn-secondary:hover {
-            border-color: var(--jaune-accent);
-            color: var(--jaune-accent);
+            background: var(--gris-ardoise);
         }
 
-        /* ===== SECTION PRÉSENTATION ===== */
+        /* ===== SECTION PRÉSENTATION NOIR ===== */
         .section {
             padding: var(--space-xl) var(--space-md);
             max-width: 1200px;
@@ -256,7 +254,7 @@
             font-weight: 600;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: var(--rouge-sang);
+            color: var(--jaune-accent);
             margin-bottom: var(--space-xs);
         }
 
@@ -264,15 +262,14 @@
             font-family: var(--font-display);
             font-size: clamp(1.8rem, 3vw, 2.5rem);
             font-weight: 700;
-            color: var(--noir-breton);
+            color: var(--blanc-hermine);
         }
 
-        /* Présentation */
         .presentation {
-            background: white;
+            background: var(--gris-ardoise);
             padding: var(--space-lg);
             border-left: 4px solid var(--jaune-accent);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
             margin-bottom: var(--space-lg);
         }
 
@@ -280,19 +277,23 @@
             font-family: var(--font-display);
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--noir-breton);
+            color: var(--blanc-hermine);
             margin-bottom: var(--space-sm);
         }
 
         .presentation p {
-            color: var(--gris-pierre);
+            color: var(--gris-clair);
             font-size: 1.05rem;
             line-height: 1.8;
             margin-bottom: var(--space-sm);
         }
 
-        .presentation p:last-child {
+        .presentation p:last-of-type {
             margin-bottom: 0;
+        }
+
+        .presentation strong {
+            color: var(--jaune-accent);
         }
 
         .services-list {
@@ -306,34 +307,34 @@
             display: inline-flex;
             align-items: center;
             gap: 0.4rem;
-            background: var(--blanc-hermine);
-            border: 1px solid var(--gris-clair);
+            background: var(--noir-breton);
+            border: 1px solid rgba(255,255,255,0.1);
             padding: 0.5rem 1rem;
             font-size: 0.85rem;
             font-weight: 500;
-            color: var(--noir-breton);
+            color: var(--blanc-hermine);
         }
 
         .service-tag svg {
-            color: var(--rouge-sang);
+            color: var(--jaune-accent);
         }
 
-        /* ===== SECTION TARIFS ===== */
+        /* ===== SECTION TARIFS BLANC ===== */
         .tarifs-section {
-            background: var(--noir-breton);
+            background: var(--blanc-hermine);
             padding: var(--space-xl) var(--space-md);
         }
 
         .tarifs-section .section-header {
-            color: var(--blanc-hermine);
+            color: var(--noir-breton);
         }
 
         .tarifs-section .section-label {
-            color: var(--jaune-accent);
+            color: var(--rouge-sang);
         }
 
         .tarifs-section .section-title {
-            color: var(--blanc-hermine);
+            color: var(--noir-breton);
         }
 
         .tarifs-grid {
@@ -345,7 +346,7 @@
         }
 
         .tarif-card {
-            background: var(--gris-ardoise);
+            background: var(--noir-breton);
             border: 1px solid rgba(255,255,255,0.08);
             overflow: hidden;
         }
@@ -419,7 +420,6 @@
             font-style: italic;
         }
 
-        /* Card spéciale PAD */
         .tarif-card.highlight {
             border-color: var(--jaune-accent);
         }
@@ -433,9 +433,9 @@
             color: var(--noir-breton);
         }
 
-        /* ===== SECTION CONTACT ===== */
+        /* ===== SECTION CONTACT NOIR ===== */
         .contact-section {
-            background: white;
+            background: var(--noir-breton);
         }
 
         .contact-list {
@@ -454,7 +454,7 @@
         .contact-icon {
             width: 50px;
             height: 50px;
-            background: var(--noir-breton);
+            background: var(--blanc-hermine);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -464,24 +464,24 @@
         .contact-icon svg {
             width: 24px;
             height: 24px;
-            color: var(--jaune-accent);
+            color: var(--noir-breton);
         }
 
         .contact-details h4 {
             font-family: var(--font-display);
             font-size: 1.1rem;
             font-weight: 600;
-            color: var(--noir-breton);
+            color: var(--blanc-hermine);
             margin-bottom: 0.25rem;
         }
 
         .contact-details p {
-            color: var(--gris-pierre);
+            color: var(--gris-clair);
             font-size: 0.95rem;
         }
 
         .contact-details a {
-            color: var(--rouge-sang);
+            color: var(--jaune-accent);
             text-decoration: none;
             font-weight: 500;
         }
@@ -490,9 +490,9 @@
             text-decoration: underline;
         }
 
-        /* ===== FOOTER ===== */
+        /* ===== FOOTER BLANC ===== */
         .footer {
-            background: var(--noir-breton);
+            background: var(--blanc-hermine);
             padding: var(--space-md) var(--space-md);
         }
 
@@ -509,11 +509,12 @@
         .footer-brand {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
+            gap: var(--space-md);
         }
 
         .footer-brand .logo-name {
             font-size: 1.1rem;
+            color: var(--noir-breton);
         }
 
         .footer-info {
@@ -564,14 +565,14 @@
                 right: -100%;
                 width: 70%;
                 height: 100vh;
-                background: var(--noir-breton);
+                background: var(--blanc-hermine);
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 gap: var(--space-md);
                 transition: right 0.3s ease;
                 z-index: 1001;
-                border-left: 2px solid var(--jaune-accent);
+                border-left: 4px solid var(--noir-breton);
             }
 
             .nav.active {
@@ -594,7 +595,7 @@
             .menu-toggle span {
                 width: 28px;
                 height: 3px;
-                background: var(--blanc-hermine);
+                background: var(--noir-breton);
                 transition: all 0.3s ease;
             }
 
@@ -696,7 +697,6 @@
             }
         }
 
-        /* Cacher le menu toggle sur desktop */
         .menu-toggle {
             display: none;
         }
@@ -713,7 +713,7 @@
         <div class="header-content">
             <div class="logo">
                 <div class="logo-icon">
-                    <img src="logo-blanc.avif" alt="Logo Boucherie Armoricaine">
+                    <img src="logo-noir.avif" alt="Logo Boucherie Armoricaine">
                 </div>
                 <div class="logo-text">
                     <span class="logo-tagline">Lesneven • Finistère</span>
@@ -964,7 +964,7 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="logo-icon" style="width: 90px; height: 90px;">
-                    <img src="logo-blanc.avif" alt="Logo Boucherie Armoricaine">
+                    <img src="logo-noir.avif" alt="Logo Boucherie Armoricaine">
                 </div>
             </div>
             <div class="footer-info">
