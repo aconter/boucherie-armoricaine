@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boucherie Armoricaine — Abattage & Découpe à Lesneven</title>
-    <meta name="description" content="Boucherie Armoricaine à Lesneven (29) - Service d'abattage, découpe et transformation de viandes. Bœuf, porc, agneau. Tarifs professionnels.">
+    <meta name="description" content="Boucherie Armoricaine à Lesneven (29) - Service d'abattage, découpe et transformation de viandes. Bœuf, porc, agneau, volaille. Tarifs professionnels.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -531,6 +531,41 @@
             margin-top: 0.25rem;
         }
 
+        /* Crédit développeur */
+        .footer-credit {
+            width: 100%;
+            margin-top: var(--space-md);
+            padding-top: var(--space-sm);
+            border-top: 1px solid var(--gris-clair);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+        }
+
+        .footer-credit span {
+            font-size: 0.85rem;
+            color: var(--gris-pierre);
+            letter-spacing: 0.05em;
+        }
+
+        .footer-credit a {
+            display: flex;
+            align-items: center;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .footer-credit a:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        .footer-credit img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 900px) {
             .tarifs-grid {
@@ -694,6 +729,10 @@
 
             .footer-info {
                 text-align: center;
+            }
+
+            .footer-credit {
+                margin-top: var(--space-sm);
             }
         }
 
@@ -907,7 +946,7 @@
             </div>
             <h1>Abattage & Découpe <br><span class="accent">sur mesure</span></h1>
             <p class="hero-description">
-                Service professionnel d'abattage, découpe et transformation de viandes pour particuliers et éleveurs. Bœuf, porc, agneau : un travail artisanal de qualité.
+                Service professionnel d'abattage, découpe et transformation de viandes pour particuliers et éleveurs. Bœuf, porc, agneau, volaille — un travail artisanal de qualité.
             </p>
             <div class="hero-cta">
                 <a href="#tarifs" class="btn btn-primary">
@@ -1137,6 +1176,12 @@
                 <p>SARL Kig Armor — 23 rue d'Arvor, 29260 Lesneven</p>
                 <p class="legal">© 2025 Boucherie Armoricaine. Tous droits réservés.</p>
             </div>
+            <div class="footer-credit">
+                <span>Site réalisé par</span>
+                <a href="https://antoine-conter.fr" target="_blank" rel="noopener" title="Antoine CONTER Informatique">
+                    <img src="Antoine-CONTER-informatique-Logo.avif" alt="Antoine CONTER Informatique">
+                </a>
+            </div>
         </div>
     </footer>
 
@@ -1155,7 +1200,7 @@
             <button id="close-form" aria-label="Fermer le formulaire">&times;</button>
         </div>
         <div id="contact-form-body">
-            <form action="https://formspree.io/f/xgovqjzd" method="POST">
+            <form action="https://formspree.io/f/VOTRE_ID" method="POST">
                 <label for="form-name">Nom</label>
                 <input type="text" id="form-name" name="name" placeholder="Votre nom" required>
 
