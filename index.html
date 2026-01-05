@@ -704,6 +704,172 @@
         .menu-overlay {
             display: none;
         }
+
+        /* ===== BULLE CONTACT FLOTTANTE ===== */
+        :root {
+            --bubble-size: 60px;
+            --bubble-height: 60px;
+        }
+
+        #contact-bubble {
+            position: fixed;
+            right: 20px;
+            bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+            width: var(--bubble-size);
+            height: var(--bubble-size);
+            background: linear-gradient(135deg, var(--rouge-sang) 0%, var(--rouge-clair) 100%);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(139, 30, 63, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        #contact-bubble:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(139, 30, 63, 0.5);
+        }
+
+        #contact-bubble svg {
+            width: 28px;
+            height: 28px;
+            color: var(--blanc-hermine);
+        }
+
+        #contact-form {
+            display: none;
+            position: fixed;
+            right: 20px;
+            bottom: calc(var(--bubble-height) + env(safe-area-inset-bottom, 0px) + 30px);
+            background: var(--noir-breton);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 0;
+            width: min(360px, 92vw);
+            box-shadow: 0 8px 30px rgba(0,0,0, 0.4);
+            font-family: var(--font-body);
+            z-index: 3100;
+            overflow: hidden;
+        }
+
+        #contact-form-header {
+            background: linear-gradient(135deg, var(--rouge-sang) 0%, var(--rouge-clair) 100%);
+            padding: var(--space-sm) var(--space-md);
+            position: relative;
+        }
+
+        #contact-form-header h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--blanc-hermine);
+            margin: 0;
+        }
+
+        #contact-form-header p {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 0.2rem;
+        }
+
+        #close-form {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            font-size: 24px;
+            color: rgba(255,255,255,0.7);
+            cursor: pointer;
+            z-index: 3200;
+            padding: 0;
+            line-height: 1;
+            transition: color 0.3s ease;
+        }
+
+        #close-form:hover {
+            color: var(--blanc-hermine);
+        }
+
+        #contact-form-body {
+            padding: var(--space-md);
+        }
+
+        #contact-form label {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--jaune-accent);
+            margin-bottom: 0.4rem;
+        }
+
+        #contact-form input,
+        #contact-form textarea {
+            width: 100%;
+            margin-bottom: var(--space-sm);
+            padding: 0.75rem;
+            background: var(--gris-ardoise);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--blanc-hermine);
+            font-size: 0.95rem;
+            font-family: var(--font-body);
+            transition: border-color 0.3s ease;
+        }
+
+        #contact-form input::placeholder,
+        #contact-form textarea::placeholder {
+            color: var(--gris-pierre);
+        }
+
+        #contact-form input:focus,
+        #contact-form textarea:focus {
+            outline: none;
+            border-color: var(--jaune-accent);
+        }
+
+        #contact-form textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        #contact-form button[type="submit"] {
+            width: 100%;
+            padding: 0.9rem;
+            background: var(--rouge-sang);
+            border: none;
+            color: var(--blanc-hermine);
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-family: var(--font-body);
+            letter-spacing: 0.03em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+        }
+
+        #contact-form button[type="submit"]:hover {
+            background: var(--rouge-clair);
+        }
+
+        @media (max-width: 768px) {
+            #contact-bubble {
+                right: 15px;
+                bottom: calc(15px + env(safe-area-inset-bottom, 0px));
+            }
+
+            #contact-form {
+                right: 10px;
+                left: 10px;
+                width: auto;
+                bottom: calc(var(--bubble-height) + env(safe-area-inset-bottom, 0px) + 25px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -741,7 +907,7 @@
             </div>
             <h1>Abattage & Découpe <br><span class="accent">sur mesure</span></h1>
             <p class="hero-description">
-                Service professionnel d'abattage, découpe et transformation de viandes pour particuliers et éleveurs. Bœuf, porc, agneau : un travail artisanal de qualité.
+                Service professionnel d'abattage, découpe et transformation de viandes pour particuliers et éleveurs. Bœuf, porc, agneau, volaille — un travail artisanal de qualité.
             </p>
             <div class="hero-cta">
                 <a href="#tarifs" class="btn btn-primary">
@@ -974,6 +1140,39 @@
         </div>
     </footer>
 
+    <!-- BULLE CONTACT FLOTTANTE -->
+    <button id="contact-bubble" aria-label="Ouvrir le formulaire de contact" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+    </button>
+
+    <!-- FORMULAIRE DE CONTACT -->
+    <div id="contact-form" role="dialog" aria-labelledby="form-title">
+        <div id="contact-form-header">
+            <h3 id="form-title">Contactez-nous</h3>
+            <p>Réponse sous 24h</p>
+            <button id="close-form" aria-label="Fermer le formulaire">&times;</button>
+        </div>
+        <div id="contact-form-body">
+            <form action="https://formspree.io/f/xgovqjzd" method="POST">
+                <label for="form-name">Nom</label>
+                <input type="text" id="form-name" name="name" placeholder="Votre nom" required>
+
+                <label for="form-email">Email</label>
+                <input type="email" id="form-email" name="email" placeholder="votre@email.com" required>
+
+                <label for="form-phone">Téléphone</label>
+                <input type="tel" id="form-phone" name="phone" placeholder="06 00 00 00 00">
+
+                <label for="form-message">Message</label>
+                <textarea id="form-message" name="message" placeholder="Votre message..." required></textarea>
+
+                <button type="submit">Envoyer le message</button>
+            </form>
+        </div>
+    </div>
+
     <script>
         function toggleMenu() {
             document.getElementById('nav').classList.toggle('active');
@@ -988,6 +1187,27 @@
             document.getElementById('menuOverlay').classList.remove('active');
             document.body.style.overflow = '';
         }
+
+        // Bulle formulaire de contact
+        (function () {
+            var bubble = document.getElementById('contact-bubble');
+            var form = document.getElementById('contact-form');
+            var closeBtn = document.getElementById('close-form');
+            if(!bubble || !form || !closeBtn) return;
+
+            function toggle(open){
+                var isOpen = typeof open === 'boolean' ? open : form.style.display !== 'block';
+                form.style.display = isOpen ? 'block' : 'none';
+                bubble.setAttribute('aria-expanded', String(isOpen));
+            }
+            bubble.addEventListener('click', function(){ toggle(true); });
+            closeBtn.addEventListener('click', function(){ toggle(false); });
+            document.addEventListener('click', function(e){
+                if(!form.contains(e.target) && e.target !== bubble && !bubble.contains(e.target)){ 
+                    toggle(false); 
+                }
+            });
+        })();
     </script>
 
 </body>
