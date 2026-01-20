@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://boucheriearmoricaine.com//sitemap.xml
