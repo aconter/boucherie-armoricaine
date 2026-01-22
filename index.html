@@ -5,6 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boucherie Armoricaine — Abattage & Découpe à Lesneven</title>
     <meta name="description" content="Boucherie Armoricaine à Lesneven (29) - Service d'abattage, découpe et transformation de viandes. Bœuf, porc, agneau. Tarifs professionnels.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Boucherie Armoricaine — Abattage & Découpe à Lesneven">
+    <meta property="og:description" content="Service professionnel d'abattage, découpe et transformation de viandes à Lesneven, Finistère.">
+    <meta property="og:image" content="https://boucheriearmoricaine.com/logo-noir.avif">
+    <meta property="og:url" content="https://boucheriearmoricaine.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Boucherie Armoricaine — Abattage & Découpe">
+    <meta name="twitter:description" content="Service professionnel d'abattage et découpe de viandes à Lesneven.">
+    <meta name="twitter:image" content="https://boucheriearmoricaine.com/logo-noir.avif">
+    
+    <!-- Données structurées Schema.org pour Google (Logo + LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://boucheriearmoricaine.com/",
+      "name": "Boucherie Armoricaine",
+      "alternateName": "SARL Kig Armor",
+      "description": "Service professionnel d'abattage, découpe et transformation de viandes pour particuliers et éleveurs. Bœuf, porc, agneau.",
+      "url": "https://boucheriearmoricaine.com/",
+      "logo": "https://boucheriearmoricaine.com/logo-noir.avif",
+      "image": "https://boucheriearmoricaine.com/logo-noir.avif",
+      "telephone": "+33298210899",
+      "email": "boucheriearmoricaine@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "23 rue d'Arvor",
+        "addressLocality": "Lesneven",
+        "postalCode": "29260",
+        "addressRegion": "Finistère",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.5739,
+        "longitude": -4.3227
+      },
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Credit Card",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.5739,
+          "longitude": -4.3227
+        },
+        "geoRadius": "50000"
+      },
+      "sameAs": []
+    }
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -332,7 +394,7 @@
             justify-content: center;
         }
 
-        /* Image de fond en filigrane */
+        /* Image de fond visible */
         .hero::before {
             content: '';
             position: absolute;
@@ -340,11 +402,11 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('3357.jpg');
+            background-image: url('3357.avif');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            opacity: 0.12;
+            opacity: 0.35;
             z-index: 0;
         }
 
@@ -383,28 +445,32 @@
             margin-bottom: var(--space-sm);
             opacity: 0;
             animation: fadeInUp 0.8s ease-out 0.4s forwards;
+            text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.9), 0 0 45px rgba(255,255,255,0.7);
         }
 
         .hero h1 .accent {
             color: var(--rouge-sang);
             display: block;
+            text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.9), 0 0 45px rgba(255,255,255,0.7);
         }
 
         .hero h1 .subtitle {
             font-size: clamp(1.2rem, 2.5vw, 1.8rem);
             font-weight: 600;
-            color: var(--gris-pierre);
+            color: var(--noir-breton);
             margin-top: var(--space-xs);
+            text-shadow: 0 0 12px rgba(255,255,255,1), 0 0 25px rgba(255,255,255,0.9);
         }
 
         .hero-description {
             font-size: 1.15rem;
-            color: var(--gris-pierre);
+            color: var(--noir-breton);
             max-width: 650px;
             margin: 0 auto var(--space-md);
-            font-weight: 300;
+            font-weight: 400;
             opacity: 0;
             animation: fadeInUp 0.8s ease-out 0.6s forwards;
+            text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,0.9);
         }
 
         .hero-cta {
@@ -1359,7 +1425,7 @@
             </div>
             <h1>
                 Boucherie Armoricaine,
-                <span class="accent">Découpe et Colie de Viande</span>
+                <span class="accent">Découpe et Colis de Viande</span>
                 <span class="subtitle">Finistère Nord</span>
             </h1>
             <p class="hero-description">
@@ -1562,7 +1628,7 @@
                 </div>
                 <div class="contact-details">
                     <h4>Téléphone</h4>
-                    <p><a href="tel:0298210348">02 98 21 08 99</a></p>
+                    <p><a href="tel:0298210899">02 98 21 08 99</a></p>
                 </div>
             </div>
 
@@ -1668,6 +1734,7 @@
     </div>
 
     <script>
+        // Menu mobile
         function toggleMenu() {
             document.getElementById('nav').classList.toggle('active');
             document.getElementById('menuToggle').classList.toggle('active');
@@ -1753,7 +1820,7 @@
                 var target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     var headerHeight = document.querySelector('.header').offsetHeight;
-                    var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                    var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
@@ -1762,6 +1829,5 @@
             });
         });
     </script>
-
 </body>
 </html>
