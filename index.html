@@ -6,11 +6,9 @@
     <title>Boucherie Armoricaine — Abattage & Découpe à Lesneven</title>
     <meta name="description" content="Boucherie Armoricaine à Lesneven (29) - Service d'abattage, découpe et transformation de viandes. Bœuf, porc, agneau. Tarifs professionnels.">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="icon" type="image/png" href="/logo-noir.avif">
+    <link rel="apple-touch-icon" href="/logo-noir.avif">
     
-    <!-- Open Graph (Facebook, LinkedIn) -->
     <meta property="og:title" content="Boucherie Armoricaine — Abattage & Découpe à Lesneven">
     <meta property="og:description" content="Service professionnel d'abattage, découpe et transformation de viandes à Lesneven, Finistère.">
     <meta property="og:image" content="https://boucheriearmoricaine.com/logo-noir.avif">
@@ -18,13 +16,11 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Boucherie Armoricaine — Abattage & Découpe">
     <meta name="twitter:description" content="Service professionnel d'abattage et découpe de viandes à Lesneven.">
     <meta name="twitter:image" content="https://boucheriearmoricaine.com/logo-noir.avif">
     
-    <!-- Données structurées Schema.org pour Google (Logo + LocalBusiness) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -53,17 +49,7 @@
       },
       "priceRange": "€€",
       "currenciesAccepted": "EUR",
-      "paymentAccepted": "Cash, Credit Card",
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 48.5739,
-          "longitude": -4.3227
-        },
-        "geoRadius": "50000"
-      },
-      "sameAs": []
+      "paymentAccepted": "Cash, Credit Card"
     }
     </script>
     
@@ -92,141 +78,25 @@
             --space-xl: 6rem;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background-color: var(--noir-breton);
-            color: var(--blanc-hermine);
-            line-height: 1.6;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background-color: var(--noir-breton); color: var(--blanc-hermine); line-height: 1.6; }
 
         /* ===== ANIMATIONS ===== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes scaleIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        .animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-fadeInDown { animation: fadeInDown 0.8s ease-out forwards; }
+        .animate-fadeIn { animation: fadeIn 1s ease-out forwards; }
+        .animate-slideInLeft { animation: slideInLeft 0.8s ease-out forwards; }
+        .animate-scaleIn { animation: scaleIn 0.6s ease-out forwards; }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @keyframes shimmer {
-            0% {
-                background-position: -200% 0;
-            }
-            100% {
-                background-position: 200% 0;
-            }
-        }
-
-        /* Classes d'animation réutilisables */
-        .animate-fadeInUp {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .animate-fadeInDown {
-            animation: fadeInDown 0.8s ease-out forwards;
-        }
-
-        .animate-fadeIn {
-            animation: fadeIn 1s ease-out forwards;
-        }
-
-        .animate-slideInLeft {
-            animation: slideInLeft 0.8s ease-out forwards;
-        }
-
-        .animate-slideInRight {
-            animation: slideInRight 0.8s ease-out forwards;
-        }
-
-        .animate-scaleIn {
-            animation: scaleIn 0.6s ease-out forwards;
-        }
-
-        /* Délais d'animation */
         .delay-1 { animation-delay: 0.1s; }
         .delay-2 { animation-delay: 0.2s; }
         .delay-3 { animation-delay: 0.3s; }
@@ -234,103 +104,219 @@
         .delay-5 { animation-delay: 0.5s; }
         .delay-6 { animation-delay: 0.6s; }
 
-        /* État initial pour les éléments animés au scroll */
-        .scroll-animate {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
+        .scroll-animate { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .scroll-animate.visible { opacity: 1; transform: translateY(0); }
+        .scroll-animate-left { opacity: 0; transform: translateX(-50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .scroll-animate-left.visible { opacity: 1; transform: translateX(0); }
+        .scroll-animate-right { opacity: 0; transform: translateX(50px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .scroll-animate-right.visible { opacity: 1; transform: translateX(0); }
+        .scroll-animate-scale { opacity: 0; transform: scale(0.9); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .scroll-animate-scale.visible { opacity: 1; transform: scale(1); }
 
-        .scroll-animate.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        /* ===== HEADER ===== */
+        .header { background: var(--blanc-hermine); padding: var(--space-sm) var(--space-md); position: sticky; top: 0; z-index: 1000; animation: fadeInDown 0.6s ease-out; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        .header-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: var(--space-sm); }
+        .logo-icon { width: 110px; height: 110px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: transform 0.3s ease; }
+        .logo-icon:hover { transform: scale(1.05); }
+        .logo-icon img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+        .logo-text { display: flex; flex-direction: column; }
+        .logo-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--noir-breton); line-height: 1.1; }
+        .logo-tagline { font-size: 1rem; color: var(--rouge-sang); text-transform: uppercase; letter-spacing: 0.15em; font-weight: 500; }
+        .nav { display: flex; gap: var(--space-lg); align-items: center; }
+        .nav a { color: var(--noir-breton); text-decoration: none; font-size: 1.1rem; font-weight: 500; letter-spacing: 0.03em; transition: color 0.3s ease, transform 0.3s ease; position: relative; }
+        .nav a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--rouge-sang); transition: width 0.3s ease; }
+        .nav a:hover { color: var(--rouge-sang); transform: translateY(-2px); }
+        .nav a:hover::after { width: 100%; }
 
-        .scroll-animate-left {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
+        /* ===== HERO ===== */
+        .hero { background: var(--blanc-hermine); padding: var(--space-xl) var(--space-md); text-align: center; position: relative; overflow: hidden; min-height: 85vh; display: flex; align-items: center; justify-content: center; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('3357.avif'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0.35; z-index: 0; }
+        .hero-content { max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--noir-breton); padding: 0.6rem 1.4rem; margin-bottom: var(--space-md); opacity: 0; animation: fadeInUp 0.8s ease-out 0.2s forwards; }
+        .hero-badge span { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blanc-hermine); }
+        .hero h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 900; color: var(--noir-breton); line-height: 1.2; margin-bottom: var(--space-sm); opacity: 0; animation: fadeInUp 0.8s ease-out 0.4s forwards; text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.9), 0 0 45px rgba(255,255,255,0.7); }
+        .hero h1 .accent { color: var(--rouge-sang); display: block; text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.9), 0 0 45px rgba(255,255,255,0.7); }
+        .hero h1 .subtitle { font-size: clamp(1.2rem, 2.5vw, 1.8rem); font-weight: 600; color: var(--noir-breton); margin-top: var(--space-xs); text-shadow: 0 0 12px rgba(255,255,255,1), 0 0 25px rgba(255,255,255,0.9); }
+        .hero-description { font-size: 1.15rem; color: var(--noir-breton); max-width: 650px; margin: 0 auto var(--space-md); font-weight: 400; opacity: 0; animation: fadeInUp 0.8s ease-out 0.6s forwards; text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,0.9); }
+        .hero-cta { display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; opacity: 0; animation: fadeInUp 0.8s ease-out 0.8s forwards; }
 
-        .scroll-animate-left.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 1.8rem; font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.03em; text-decoration: none; border: none; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s ease; }
+        .btn:hover::before { left: 100%; }
+        .btn-primary { background: var(--rouge-sang); color: var(--blanc-hermine); }
+        .btn-primary:hover { background: var(--rouge-clair); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(139, 30, 63, 0.35); }
+        .btn-secondary { background: var(--noir-breton); color: var(--blanc-hermine); }
+        .btn-secondary:hover { background: var(--gris-ardoise); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
 
-        .scroll-animate-right {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
+        /* ===== SECTIONS ===== */
+        .section { padding: var(--space-xl) var(--space-md); max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: var(--space-lg); }
+        .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--jaune-accent); margin-bottom: var(--space-xs); }
+        .section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 700; color: var(--blanc-hermine); }
 
-        .scroll-animate-right.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
+        .presentation { background: var(--gris-ardoise); padding: var(--space-lg); border-left: 4px solid var(--jaune-accent); box-shadow: 0 4px 20px rgba(0,0,0,0.3); margin-bottom: var(--space-lg); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .presentation:hover { transform: translateX(10px); box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
+        .presentation h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--blanc-hermine); margin-bottom: var(--space-sm); }
+        .presentation p { color: var(--gris-clair); font-size: 1.05rem; line-height: 1.8; margin-bottom: var(--space-sm); }
+        .presentation p:last-of-type { margin-bottom: 0; }
+        .presentation strong { color: var(--jaune-accent); }
+        .services-list { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-md); }
+        .service-tag { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--noir-breton); border: 1px solid rgba(255,255,255,0.1); padding: 0.5rem 1rem; font-size: 0.85rem; font-weight: 500; color: var(--blanc-hermine); transition: all 0.3s ease; }
+        .service-tag:hover { background: var(--rouge-sang); border-color: var(--rouge-sang); transform: translateY(-3px); }
+        .service-tag svg { color: var(--jaune-accent); transition: color 0.3s ease; }
+        .service-tag:hover svg { color: var(--blanc-hermine); }
 
-        .scroll-animate-scale {
-            opacity: 0;
-            transform: scale(0.9);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
+        /* ===== TARIFS SECTION (pro) ===== */
+        .tarifs-section { background: var(--blanc-hermine); padding: var(--space-xl) var(--space-md); }
+        .tarifs-section .section-header { color: var(--noir-breton); }
+        .tarifs-section .section-label { color: var(--rouge-sang); }
+        .tarifs-section .section-title { color: var(--noir-breton); }
 
-        .scroll-animate-scale.visible {
-            opacity: 1;
-            transform: scale(1);
-        }
+        .tarifs-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--space-md); }
 
-        /* ===== HEADER BLANC ===== */
-        .header {
+        .tarif-card { background: var(--noir-breton); border: 1px solid rgba(255,255,255,0.08); overflow: hidden; transition: transform 0.4s ease, box-shadow 0.4s ease; }
+        .tarif-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .tarif-card-header { background: linear-gradient(135deg, var(--rouge-sang) 0%, var(--rouge-clair) 100%); padding: var(--space-sm) var(--space-md); position: relative; overflow: hidden; }
+        .tarif-card-header::after { content: ''; position: absolute; top: 0; left: -100%; width: 200%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); animation: shimmer 3s infinite; }
+        .tarif-card-header h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--blanc-hermine); position: relative; z-index: 1; }
+        .tarif-card-header p { font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-top: 0.2rem; position: relative; z-index: 1; }
+        .tarif-card-body { padding: var(--space-md); }
+
+        .tarif-table { width: 100%; border-collapse: collapse; }
+        .tarif-table thead th { text-align: left; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--jaune-accent); padding-bottom: var(--space-sm); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .tarif-table tbody td { padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--blanc-hermine); font-size: 0.95rem; transition: background 0.3s ease; }
+        .tarif-table tbody tr:hover td { background: rgba(255,255,255,0.02); }
+        .tarif-table tbody tr:last-child td { border-bottom: none; }
+        .tarif-table .produit { font-weight: 500; }
+        .tarif-table .prix { text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--jaune-accent); }
+        .tarif-note { margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; color: var(--gris-pierre); font-style: italic; }
+        .tarif-card.highlight { border-color: var(--jaune-accent); }
+        .tarif-card.highlight .tarif-card-header { background: linear-gradient(135deg, var(--jaune-accent) 0%, #d4952f 100%); }
+        .tarif-card.highlight .tarif-card-header h3, .tarif-card.highlight .tarif-card-header p { color: var(--noir-breton); }
+
+        /* ===== TARIFS PARTICULIERS SECTION ===== */
+        .tarifs-particuliers-section {
             background: var(--blanc-hermine);
-            padding: var(--space-sm) var(--space-md);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            animation: fadeInDown 0.6s ease-out;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: var(--space-xl) var(--space-md);
         }
+        .tarifs-particuliers-section .section-label { color: var(--rouge-sang); }
+        .tarifs-particuliers-section .section-title { color: var(--noir-breton); }
+        .tarifs-particuliers-section .section-note { color: var(--gris-pierre); }
 
-        .header-content {
+        .tarifs-particuliers-section .tarifs-grid {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
         }
 
-        .logo {
+        @media (max-width: 768px) {
+            .tarifs-particuliers-section .tarifs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Cards particuliers avec fond légèrement différent */
+        .tarifs-particuliers-section .tarif-card {
+            background: var(--noir-breton);
+            border: 1px solid rgba(229, 168, 59, 0.15);
+        }
+        .tarifs-particuliers-section .tarif-card:hover {
+            border-color: rgba(229, 168, 59, 0.4);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(229,168,59,0.2);
+        }
+
+        /* Badge "Nouveau" pour la section particuliers */
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--rouge-sang);
+            color: var(--blanc-hermine);
+            padding: 0.35rem 0.9rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-note {
+            font-size: 0.9rem;
+            color: var(--gris-pierre);
+            margin-top: var(--space-sm);
+            font-style: italic;
+        }
+
+        /* Mise en avant "Sous vide offert / Congélation offerte" */
+        .prestation-offerte {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+            flex-wrap: wrap;
+        }
+        .offerte-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(229, 168, 59, 0.1);
+            border: 1px solid var(--jaune-accent);
+            color: var(--jaune-accent);
+            padding: 0.45rem 0.9rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== BANNER PRESTATIONS OFFERTES ===== */
+        .prestations-offertes-banner {
+            max-width: 1200px;
+            margin: var(--space-md) auto 0;
+        }
+
+        .prestations-offertes-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-lg);
+            background: linear-gradient(135deg, var(--jaune-accent) 0%, #d4952f 100%);
+            padding: var(--space-md) var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .offerte-item {
             display: flex;
             align-items: center;
             gap: var(--space-sm);
         }
 
-        .logo-icon {
-            width: 110px;
-            height: 110px;
+        .offerte-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(0,0,0,0.15);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            transition: transform 0.3s ease;
+            color: var(--noir-breton);
         }
 
-        .logo-icon:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            mix-blend-mode: multiply;
-        }
-
-        .logo-text {
+        .offerte-texte {
             display: flex;
             flex-direction: column;
         }
 
-        .logo-name {
+        .offerte-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(0,0,0,0.6);
+        }
+
+        .offerte-nom {
             font-family: var(--font-display);
             font-size: 1.4rem;
             font-weight: 700;
@@ -338,1056 +324,138 @@
             line-height: 1.1;
         }
 
-        .logo-tagline {
-            font-size: 1rem;
-            color: var(--rouge-sang);
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            font-weight: 500;
-        }
-
-        .nav {
-            display: flex;
-            gap: var(--space-lg);
-            align-items: center;
-        }
-
-        .nav a {
-            color: var(--noir-breton);
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            letter-spacing: 0.03em;
-            transition: color 0.3s ease, transform 0.3s ease;
-            position: relative;
-        }
-
-        .nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--rouge-sang);
-            transition: width 0.3s ease;
-        }
-
-        .nav a:hover {
-            color: var(--rouge-sang);
-            transform: translateY(-2px);
-        }
-
-        .nav a:hover::after {
-            width: 100%;
-        }
-
-        /* ===== HERO AVEC IMAGE DE FOND ===== */
-        .hero {
-            background: var(--blanc-hermine);
-            padding: var(--space-xl) var(--space-md);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Image de fond visible */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('3357.avif');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.35;
-            z-index: 0;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            background: var(--noir-breton);
-            padding: 0.6rem 1.4rem;
-            margin-bottom: var(--space-md);
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out 0.2s forwards;
-        }
-
-        .hero-badge span {
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--blanc-hermine);
-        }
-
-        .hero h1 {
+        .offerte-prix {
             font-family: var(--font-display);
-            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            font-size: 2rem;
             font-weight: 900;
             color: var(--noir-breton);
-            line-height: 1.2;
-            margin-bottom: var(--space-sm);
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out 0.4s forwards;
-            text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.9), 0 0 45px rgba(255,255,255,0.7);
-        }
-
-        .hero h1 .accent {
-            color: var(--rouge-sang);
-            display: block;
-            text-shadow: 0 0 15px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.9), 0 0 45px rgba(255,255,255,0.7);
-        }
-
-        .hero h1 .subtitle {
-            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-            font-weight: 600;
-            color: var(--noir-breton);
-            margin-top: var(--space-xs);
-            text-shadow: 0 0 12px rgba(255,255,255,1), 0 0 25px rgba(255,255,255,0.9);
-        }
-
-        .hero-description {
-            font-size: 1.15rem;
-            color: var(--noir-breton);
-            max-width: 650px;
-            margin: 0 auto var(--space-md);
-            font-weight: 400;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out 0.6s forwards;
-            text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,0.9);
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: var(--space-sm);
-            justify-content: center;
-            flex-wrap: wrap;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease-out 0.8s forwards;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.9rem 1.8rem;
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 0.03em;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary {
-            background: var(--rouge-sang);
-            color: var(--blanc-hermine);
-        }
-
-        .btn-primary:hover {
-            background: var(--rouge-clair);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(139, 30, 63, 0.35);
-        }
-
-        .btn-secondary {
-            background: var(--noir-breton);
-            color: var(--blanc-hermine);
-        }
-
-        .btn-secondary:hover {
-            background: var(--gris-ardoise);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        /* ===== SECTION PRÉSENTATION NOIR ===== */
-        .section {
-            padding: var(--space-xl) var(--space-md);
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: var(--space-lg);
-        }
-
-        .section-label {
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--jaune-accent);
-            margin-bottom: var(--space-xs);
-        }
-
-        .section-title {
-            font-family: var(--font-display);
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            font-weight: 700;
-            color: var(--blanc-hermine);
-        }
-
-        .presentation {
-            background: var(--gris-ardoise);
-            padding: var(--space-lg);
-            border-left: 4px solid var(--jaune-accent);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            margin-bottom: var(--space-lg);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .presentation:hover {
-            transform: translateX(10px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-        }
-
-        .presentation h2 {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--blanc-hermine);
-            margin-bottom: var(--space-sm);
-        }
-
-        .presentation p {
-            color: var(--gris-clair);
-            font-size: 1.05rem;
-            line-height: 1.8;
-            margin-bottom: var(--space-sm);
-        }
-
-        .presentation p:last-of-type {
-            margin-bottom: 0;
-        }
-
-        .presentation strong {
-            color: var(--jaune-accent);
-        }
-
-        .services-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-sm);
-            margin-top: var(--space-md);
-        }
-
-        .service-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: var(--noir-breton);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 0.5rem 1rem;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--blanc-hermine);
-            transition: all 0.3s ease;
-        }
-
-        .service-tag:hover {
-            background: var(--rouge-sang);
-            border-color: var(--rouge-sang);
-            transform: translateY(-3px);
-        }
-
-        .service-tag svg {
-            color: var(--jaune-accent);
-            transition: color 0.3s ease;
-        }
-
-        .service-tag:hover svg {
-            color: var(--blanc-hermine);
-        }
-
-        /* ===== SECTION TARIFS BLANC ===== */
-        .tarifs-section {
-            background: var(--blanc-hermine);
-            padding: var(--space-xl) var(--space-md);
-        }
-
-        .tarifs-section .section-header {
-            color: var(--noir-breton);
-        }
-
-        .tarifs-section .section-label {
-            color: var(--rouge-sang);
-        }
-
-        .tarifs-section .section-title {
-            color: var(--noir-breton);
-        }
-
-        .tarifs-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: var(--space-md);
-        }
-
-        .tarif-card {
-            background: var(--noir-breton);
-            border: 1px solid rgba(255,255,255,0.08);
-            overflow: hidden;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-
-        .tarif-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .tarif-card-header {
-            background: linear-gradient(135deg, var(--rouge-sang) 0%, var(--rouge-clair) 100%);
-            padding: var(--space-sm) var(--space-md);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tarif-card-header::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 200%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            animation: shimmer 3s infinite;
-        }
-
-        .tarif-card-header h3 {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--blanc-hermine);
-            position: relative;
-            z-index: 1;
-        }
-
-        .tarif-card-header p {
-            font-size: 0.8rem;
-            color: rgba(255,255,255,0.7);
-            margin-top: 0.2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .tarif-card-body {
-            padding: var(--space-md);
-        }
-
-        .tarif-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .tarif-table thead th {
-            text-align: left;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--jaune-accent);
-            padding-bottom: var(--space-sm);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .tarif-table tbody td {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            color: var(--blanc-hermine);
-            font-size: 0.95rem;
-            transition: background 0.3s ease;
-        }
-
-        .tarif-table tbody tr:hover td {
-            background: rgba(255,255,255,0.02);
-        }
-
-        .tarif-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        .tarif-table .produit {
-            font-weight: 500;
-        }
-
-        .tarif-table .prix {
-            text-align: right;
-            font-family: var(--font-display);
-            font-weight: 600;
-            color: var(--jaune-accent);
-        }
-
-        .tarif-note {
-            margin-top: var(--space-sm);
-            padding-top: var(--space-sm);
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.8rem;
-            color: var(--gris-pierre);
-            font-style: italic;
-        }
-
-        .tarif-card.highlight {
-            border-color: var(--jaune-accent);
-        }
-
-        .tarif-card.highlight .tarif-card-header {
-            background: linear-gradient(135deg, var(--jaune-accent) 0%, #d4952f 100%);
-        }
-
-        .tarif-card.highlight .tarif-card-header h3,
-        .tarif-card.highlight .tarif-card-header p {
-            color: var(--noir-breton);
-        }
-
-        /* ===== SECTION CONTACT NOIR ===== */
-        .contact-section {
-            background: var(--noir-breton);
-        }
-
-        .contact-list {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-lg);
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-sm);
-            transition: transform 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--blanc-hermine);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover .contact-icon {
-            background: var(--jaune-accent);
-        }
-
-        .contact-icon svg {
-            width: 24px;
-            height: 24px;
-            color: var(--noir-breton);
-            transition: transform 0.3s ease;
-        }
-
-        .contact-item:hover .contact-icon svg {
-            transform: scale(1.1);
-        }
-
-        .contact-details h4 {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--blanc-hermine);
-            margin-bottom: 0.25rem;
-        }
-
-        .contact-details p {
-            color: var(--gris-clair);
-            font-size: 0.95rem;
-        }
-
-        .contact-details a {
-            color: var(--jaune-accent);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .contact-details a:hover {
-            color: var(--blanc-hermine);
-            text-decoration: underline;
-        }
-
-        /* ===== SECTION GOOGLE MAPS ===== */
-        .map-section {
-            background: var(--gris-ardoise);
-            padding: var(--space-lg) 0 0 0;
-        }
-
-        .map-section .section-header {
-            padding: 0 var(--space-md) var(--space-md);
-        }
-
-        .map-container {
-            width: 100%;
-            height: 450px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            filter: grayscale(20%) contrast(1.1);
-            transition: filter 0.5s ease;
-        }
-
-        .map-container:hover iframe {
-            filter: grayscale(0%) contrast(1);
-        }
-
-        .map-overlay {
-            position: absolute;
-            top: var(--space-md);
-            left: var(--space-md);
-            background: var(--noir-breton);
-            padding: var(--space-md);
-            max-width: 300px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-            z-index: 10;
-        }
-
-        .map-overlay h4 {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--blanc-hermine);
-            margin-bottom: var(--space-xs);
-        }
-
-        .map-overlay p {
-            color: var(--gris-clair);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .map-overlay .map-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: var(--space-sm);
-            padding: 0.6rem 1.2rem;
-            background: var(--rouge-sang);
-            color: var(--blanc-hermine);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .map-overlay .map-btn:hover {
-            background: var(--rouge-clair);
-            transform: translateY(-2px);
-        }
-
-        /* ===== FOOTER BLANC ===== */
-        .footer {
-            background: var(--blanc-hermine);
-            padding: var(--space-md) var(--space-md);
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: var(--space-sm);
-        }
-
-        .footer-brand {
-            display: flex;
-            align-items: center;
-            gap: var(--space-md);
-        }
-
-        .footer-brand .logo-name {
-            font-size: 1.1rem;
-            color: var(--noir-breton);
-        }
-
-        .footer-info {
-            text-align: right;
-        }
-
-        .footer-info p {
-            font-size: 0.85rem;
-            color: var(--gris-pierre);
-        }
-
-        .footer-info .legal {
-            font-size: 0.75rem;
-            margin-top: 0.25rem;
-        }
-
-        /* Crédit développeur */
-        .footer-credit {
-            width: 100%;
-            margin-top: var(--space-md);
-            padding-top: var(--space-sm);
-            border-top: 1px solid var(--gris-clair);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.6rem;
-        }
-
-        .footer-credit span {
-            font-size: 0.85rem;
-            color: var(--gris-pierre);
             letter-spacing: 0.05em;
+            margin-left: var(--space-sm);
         }
 
-        .footer-credit a {
-            display: flex;
-            align-items: center;
-            transition: opacity 0.3s ease, transform 0.3s ease;
+        .offerte-separateur {
+            font-size: 1.5rem;
+            color: rgba(0,0,0,0.3);
         }
 
-        .footer-credit a:hover {
-            opacity: 0.8;
-            transform: scale(1.05);
+        @media (max-width: 768px) {
+            .prestations-offertes-inner {
+                flex-direction: column;
+                gap: var(--space-md);
+                padding: var(--space-md);
+            }
+            .offerte-separateur { display: none; }
+            .offerte-prix { font-size: 1.6rem; }
         }
+        .contact-section { background: var(--noir-breton); }
+        .contact-list { display: flex; justify-content: center; gap: var(--space-lg); flex-wrap: wrap; }
+        .contact-item { display: flex; align-items: flex-start; gap: var(--space-sm); transition: transform 0.3s ease; }
+        .contact-item:hover { transform: translateY(-5px); }
+        .contact-icon { width: 50px; height: 50px; background: var(--blanc-hermine); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease; }
+        .contact-item:hover .contact-icon { background: var(--jaune-accent); }
+        .contact-icon svg { width: 24px; height: 24px; color: var(--noir-breton); transition: transform 0.3s ease; }
+        .contact-item:hover .contact-icon svg { transform: scale(1.1); }
+        .contact-details h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--blanc-hermine); margin-bottom: 0.25rem; }
+        .contact-details p { color: var(--gris-clair); font-size: 0.95rem; }
+        .contact-details a { color: var(--jaune-accent); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+        .contact-details a:hover { color: var(--blanc-hermine); text-decoration: underline; }
 
-        .footer-credit img {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
-        }
+        /* ===== MAP ===== */
+        .map-section { background: var(--gris-ardoise); padding: var(--space-lg) 0 0 0; }
+        .map-section .section-header { padding: 0 var(--space-md) var(--space-md); }
+        .map-container { width: 100%; height: 450px; position: relative; overflow: hidden; }
+        .map-container iframe { width: 100%; height: 100%; border: none; filter: grayscale(20%) contrast(1.1); transition: filter 0.5s ease; }
+        .map-container:hover iframe { filter: grayscale(0%) contrast(1); }
+        .map-overlay { position: absolute; top: var(--space-md); left: var(--space-md); background: var(--noir-breton); padding: var(--space-md); max-width: 300px; box-shadow: 0 8px 30px rgba(0,0,0,0.4); z-index: 10; }
+        .map-overlay h4 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--blanc-hermine); margin-bottom: var(--space-xs); }
+        .map-overlay p { color: var(--gris-clair); font-size: 0.9rem; line-height: 1.6; }
+        .map-overlay .map-btn { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--space-sm); padding: 0.6rem 1.2rem; background: var(--rouge-sang); color: var(--blanc-hermine); text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: all 0.3s ease; }
+        .map-overlay .map-btn:hover { background: var(--rouge-clair); transform: translateY(-2px); }
+
+        /* ===== FOOTER ===== */
+        .footer { background: var(--blanc-hermine); padding: var(--space-md) var(--space-md); }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-sm); }
+        .footer-brand { display: flex; align-items: center; gap: var(--space-md); }
+        .footer-brand .logo-name { font-size: 1.1rem; color: var(--noir-breton); }
+        .footer-info { text-align: right; }
+        .footer-info p { font-size: 0.85rem; color: var(--gris-pierre); }
+        .footer-info .legal { font-size: 0.75rem; margin-top: 0.25rem; }
+        .footer-credit { width: 100%; margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--gris-clair); display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
+        .footer-credit span { font-size: 0.85rem; color: var(--gris-pierre); letter-spacing: 0.05em; }
+        .footer-credit a { display: flex; align-items: center; transition: opacity 0.3s ease, transform 0.3s ease; }
+        .footer-credit a:hover { opacity: 0.8; transform: scale(1.05); }
+        .footer-credit img { height: 60px; width: auto; object-fit: contain; }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 900px) {
-            .tarifs-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-list {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .map-overlay {
-                position: relative;
-                top: 0;
-                left: 0;
-                max-width: 100%;
-                margin: 0 var(--space-md) var(--space-md);
-            }
+            .tarifs-grid { grid-template-columns: 1fr; }
+            .contact-list { flex-direction: column; align-items: center; }
+            .map-overlay { position: relative; top: 0; left: 0; max-width: 100%; margin: 0 var(--space-md) var(--space-md); }
         }
 
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: row;
-                justify-content: space-between;
-                padding: var(--space-xs) 0;
-            }
-
-            .logo-icon {
-                width: 70px;
-                height: 70px;
-            }
-
-            .logo-tagline {
-                font-size: 0.75rem;
-            }
-
-            .nav {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 70%;
-                height: 100vh;
-                background: var(--blanc-hermine);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: var(--space-md);
-                transition: right 0.3s ease;
-                z-index: 1001;
-                border-left: 4px solid var(--noir-breton);
-            }
-
-            .nav.active {
-                right: 0;
-            }
-
-            .nav a {
-                font-size: 1.3rem;
-            }
-
-            .menu-toggle {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                cursor: pointer;
-                z-index: 1002;
-                padding: 10px;
-            }
-
-            .menu-toggle span {
-                width: 28px;
-                height: 3px;
-                background: var(--noir-breton);
-                transition: all 0.3s ease;
-            }
-
-            .menu-toggle.active span:nth-child(1) {
-                transform: rotate(45deg) translate(6px, 6px);
-            }
-
-            .menu-toggle.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .menu-toggle.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(6px, -6px);
-            }
-
-            .menu-overlay {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100vh;
-                background: rgba(0,0,0,0.5);
-                z-index: 1000;
-            }
-
-            .menu-overlay.active {
-                display: block;
-            }
-
-            .hero {
-                padding: var(--space-lg) var(--space-sm);
-                min-height: 70vh;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero h1 .subtitle {
-                font-size: 1rem;
-            }
-
-            .hero-description {
-                font-size: 1rem;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .section {
-                padding: var(--space-lg) var(--space-sm);
-            }
-
-            .tarifs-section {
-                padding: var(--space-lg) var(--space-sm);
-            }
-
-            .tarifs-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .presentation {
-                padding: var(--space-md);
-            }
-
-            .presentation h2 {
-                font-size: 1.3rem;
-            }
-
-            .services-list {
-                justify-content: center;
-            }
-
-            .contact-list {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .contact-item {
-                width: 100%;
-                max-width: 300px;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-                gap: var(--space-md);
-            }
-
-            .footer-brand {
-                justify-content: center;
-            }
-
-            .footer-info {
-                text-align: center;
-            }
-
-            .footer-credit {
-                margin-top: var(--space-sm);
-            }
-
-            .map-container {
-                height: 350px;
-            }
+            .header-content { flex-direction: row; justify-content: space-between; padding: var(--space-xs) 0; }
+            .logo-icon { width: 70px; height: 70px; }
+            .logo-tagline { font-size: 0.75rem; }
+            .nav { position: fixed; top: 0; right: -100%; width: 70%; height: 100vh; background: var(--blanc-hermine); flex-direction: column; justify-content: center; align-items: center; gap: var(--space-md); transition: right 0.3s ease; z-index: 1001; border-left: 4px solid var(--noir-breton); }
+            .nav.active { right: 0; }
+            .nav a { font-size: 1.3rem; }
+            .menu-toggle { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1002; padding: 10px; }
+            .menu-toggle span { width: 28px; height: 3px; background: var(--noir-breton); transition: all 0.3s ease; }
+            .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+            .menu-toggle.active span:nth-child(2) { opacity: 0; }
+            .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+            .menu-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: rgba(0,0,0,0.5); z-index: 1000; }
+            .menu-overlay.active { display: block; }
+            .hero { padding: var(--space-lg) var(--space-sm); min-height: 70vh; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero h1 .subtitle { font-size: 1rem; }
+            .hero-description { font-size: 1rem; }
+            .hero-cta { flex-direction: column; align-items: center; }
+            .btn { width: 100%; justify-content: center; }
+            .section { padding: var(--space-lg) var(--space-sm); }
+            .tarifs-section, .tarifs-particuliers-section { padding: var(--space-lg) var(--space-sm); }
+            .tarifs-grid { grid-template-columns: 1fr; }
+            .presentation { padding: var(--space-md); }
+            .presentation h2 { font-size: 1.3rem; }
+            .services-list { justify-content: center; }
+            .contact-list { flex-direction: column; align-items: center; }
+            .contact-item { width: 100%; max-width: 300px; }
+            .footer-content { flex-direction: column; text-align: center; gap: var(--space-md); }
+            .footer-brand { justify-content: center; }
+            .footer-info { text-align: center; }
+            .map-container { height: 350px; }
         }
 
-        .menu-toggle {
-            display: none;
-        }
+        .menu-toggle { display: none; }
+        .menu-overlay { display: none; }
 
-        .menu-overlay {
-            display: none;
-        }
-
-        /* ===== BULLE CONTACT FLOTTANTE ===== */
-        :root {
-            --bubble-size: 60px;
-            --bubble-height: 60px;
-        }
-
-        #contact-bubble {
-            position: fixed;
-            right: 20px;
-            bottom: calc(20px + env(safe-area-inset-bottom, 0px));
-            width: var(--bubble-size);
-            height: var(--bubble-size);
-            background: linear-gradient(135deg, var(--rouge-sang) 0%, var(--rouge-clair) 100%);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 3000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(139, 30, 63, 0.4);
-            transition: all 0.3s ease;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        #contact-bubble:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(139, 30, 63, 0.5);
-            animation-play-state: paused;
-        }
-
-        #contact-bubble svg {
-            width: 28px;
-            height: 28px;
-            color: var(--blanc-hermine);
-        }
-
-        #contact-form {
-            display: none;
-            position: fixed;
-            right: 20px;
-            bottom: calc(var(--bubble-height) + env(safe-area-inset-bottom, 0px) + 30px);
-            background: var(--noir-breton);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 0;
-            width: min(360px, 92vw);
-            box-shadow: 0 8px 30px rgba(0,0,0, 0.4);
-            font-family: var(--font-body);
-            z-index: 3100;
-            overflow: hidden;
-            animation: fadeInUp 0.4s ease-out;
-        }
-
-        #contact-form-header {
-            background: linear-gradient(135deg, var(--rouge-sang) 0%, var(--rouge-clair) 100%);
-            padding: var(--space-sm) var(--space-md);
-            position: relative;
-        }
-
-        #contact-form-header h3 {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--blanc-hermine);
-            margin: 0;
-        }
-
-        #contact-form-header p {
-            font-size: 0.8rem;
-            color: rgba(255,255,255,0.7);
-            margin-top: 0.2rem;
-        }
-
-        #close-form {
-            position: absolute;
-            top: 50%;
-            right: 15px;
-            transform: translateY(-50%);
-            background: transparent;
-            border: none;
-            font-size: 24px;
-            color: rgba(255,255,255,0.7);
-            cursor: pointer;
-            z-index: 3200;
-            padding: 0;
-            line-height: 1;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        #close-form:hover {
-            color: var(--blanc-hermine);
-            transform: translateY(-50%) rotate(90deg);
-        }
-
-        #contact-form-body {
-            padding: var(--space-md);
-        }
-
-        #contact-form label {
-            display: block;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--jaune-accent);
-            margin-bottom: 0.4rem;
-        }
-
-        #contact-form input,
-        #contact-form textarea {
-            width: 100%;
-            margin-bottom: var(--space-sm);
-            padding: 0.75rem;
-            background: var(--gris-ardoise);
-            border: 1px solid rgba(255,255,255,0.1);
-            color: var(--blanc-hermine);
-            font-size: 0.95rem;
-            font-family: var(--font-body);
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        #contact-form input::placeholder,
-        #contact-form textarea::placeholder {
-            color: var(--gris-pierre);
-        }
-
-        #contact-form input:focus,
-        #contact-form textarea:focus {
-            outline: none;
-            border-color: var(--jaune-accent);
-            box-shadow: 0 0 0 3px rgba(229, 168, 59, 0.2);
-        }
-
-        #contact-form textarea {
-            height: 100px;
-            resize: vertical;
-        }
-
-        #contact-form button[type="submit"] {
-            width: 100%;
-            padding: 0.9rem;
-            background: var(--rouge-sang);
-            border: none;
-            color: var(--blanc-hermine);
-            font-size: 0.9rem;
-            font-weight: 600;
-            font-family: var(--font-body);
-            letter-spacing: 0.03em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 0.5rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        #contact-form button[type="submit"]::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        #contact-form button[type="submit"]:hover {
-            background: var(--rouge-clair);
-            transform: translateY(-2px);
-        }
-
-        #contact-form button[type="submit"]:hover::before {
-            left: 100%;
-        }
+        /* ===== BULLE CONTACT ===== */
+        :root { --bubble-size: 60px; --bubble-height: 60px; }
+        #contact-bubble { position: fixed; right: 20px; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); width: var(--bubble-size); height: var(--bubble-size); background: linear-gradient(135deg, var(--rouge-sang) 0%, var(--rouge-clair) 100%); border: none; border-radius: 50%; cursor: pointer; z-index: 3000; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(139, 30, 63, 0.4); transition: all 0.3s ease; animation: float 3s ease-in-out infinite; }
+        #contact-bubble:hover { transform: scale(1.1); box-shadow: 0 6px 25px rgba(139, 30, 63, 0.5); animation-play-state: paused; }
+        #contact-bubble svg { width: 28px; height: 28px; color: var(--blanc-hermine); }
+        #contact-form { display: none; position: fixed; right: 20px; bottom: calc(var(--bubble-height) + env(safe-area-inset-bottom, 0px) + 30px); background: var(--noir-breton); border: 1px solid rgba(255,255,255,0.1); padding: 0; width: min(360px, 92vw); box-shadow: 0 8px 30px rgba(0,0,0, 0.4); font-family: var(--font-body); z-index: 3100; overflow: hidden; animation: fadeInUp 0.4s ease-out; }
+        #contact-form-header { background: linear-gradient(135deg, var(--rouge-sang) 0%, var(--rouge-clair) 100%); padding: var(--space-sm) var(--space-md); position: relative; }
+        #contact-form-header h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--blanc-hermine); margin: 0; }
+        #contact-form-header p { font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-top: 0.2rem; }
+        #close-form { position: absolute; top: 50%; right: 15px; transform: translateY(-50%); background: transparent; border: none; font-size: 24px; color: rgba(255,255,255,0.7); cursor: pointer; z-index: 3200; padding: 0; line-height: 1; transition: color 0.3s ease, transform 0.3s ease; }
+        #close-form:hover { color: var(--blanc-hermine); transform: translateY(-50%) rotate(90deg); }
+        #contact-form-body { padding: var(--space-md); }
+        #contact-form label { display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--jaune-accent); margin-bottom: 0.4rem; }
+        #contact-form input, #contact-form textarea { width: 100%; margin-bottom: var(--space-sm); padding: 0.75rem; background: var(--gris-ardoise); border: 1px solid rgba(255,255,255,0.1); color: var(--blanc-hermine); font-size: 0.95rem; font-family: var(--font-body); transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+        #contact-form input::placeholder, #contact-form textarea::placeholder { color: var(--gris-pierre); }
+        #contact-form input:focus, #contact-form textarea:focus { outline: none; border-color: var(--jaune-accent); box-shadow: 0 0 0 3px rgba(229, 168, 59, 0.2); }
+        #contact-form textarea { height: 100px; resize: vertical; }
+        #contact-form button[type="submit"] { width: 100%; padding: 0.9rem; background: var(--rouge-sang); border: none; color: var(--blanc-hermine); font-size: 0.9rem; font-weight: 600; font-family: var(--font-body); letter-spacing: 0.03em; cursor: pointer; transition: all 0.3s ease; margin-top: 0.5rem; position: relative; overflow: hidden; }
+        #contact-form button[type="submit"]::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s ease; }
+        #contact-form button[type="submit"]:hover { background: var(--rouge-clair); transform: translateY(-2px); }
+        #contact-form button[type="submit"]:hover::before { left: 100%; }
 
         @media (max-width: 768px) {
-            #contact-bubble {
-                right: 15px;
-                bottom: calc(15px + env(safe-area-inset-bottom, 0px));
-            }
-
-            #contact-form {
-                right: 10px;
-                left: 10px;
-                width: auto;
-                bottom: calc(var(--bubble-height) + env(safe-area-inset-bottom, 0px) + 25px);
-            }
-
-            .menu-toggle {
-                display: flex;
-            }
+            #contact-bubble { right: 15px; bottom: calc(15px + env(safe-area-inset-bottom, 0px)); }
+            #contact-form { right: 10px; left: 10px; width: auto; bottom: calc(var(--bubble-height) + env(safe-area-inset-bottom, 0px) + 25px); }
+            .menu-toggle { display: flex; }
         }
     </style>
 </head>
@@ -1406,13 +474,11 @@
             </div>
             <nav class="nav" id="nav">
                 <a href="#presentation" onclick="closeMenu()">Présentation</a>
-                <a href="#tarifs" onclick="closeMenu()">Tarifs</a>
+                <a href="#tarifs-particuliers" onclick="closeMenu()">Tarifs</a>
                 <a href="#contact" onclick="closeMenu()">Contact</a>
             </nav>
             <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
         </div>
         <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
@@ -1427,17 +493,15 @@
             <h1>
                 Boucherie Armoricaine,
                 <span class="accent">Découpe et Colis de Viande</span>
-                <span class="subtitle">Finistère Nord</span>
+                <span class="subtitle">Finistère Nord : Lesneven</span>
             </h1>
             <p class="hero-description">
                 Service professionnel d'abattage, découpe et transformation de viandes pour particuliers et éleveurs. Bœuf, porc, agneau : un travail artisanal de qualité.
             </p>
             <div class="hero-cta">
-                <a href="#tarifs" class="btn btn-primary">
+                <a href="#tarifs-particuliers" class="btn btn-primary">
                     Voir nos tarifs
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
                 <a href="#contact" class="btn btn-secondary">Nous contacter</a>
             </div>
@@ -1479,122 +543,173 @@
         </div>
     </section>
 
-    <!-- TARIFS -->
-    <section class="tarifs-section" id="tarifs">
+    <!-- ===== TARIFS PARTICULIERS ===== -->
+    <section class="tarifs-particuliers-section" id="tarifs-particuliers">
         <div class="section-header scroll-animate">
-            <p class="section-label">Grille tarifaire 2026</p>
-            <h2 class="section-title">Nos Tarifs (HT)</h2>
+            <div class="section-badge">✦ Février 2026</div>
+            <p class="section-label">Vente au détail — Colis particuliers</p>
+            <h2 class="section-title">Tarifs Particuliers (TTC/kg)</h2>
+            <p class="section-note">Prix susceptibles d'évoluer en fonction du cours de la viande. Toute commande est soumise à la disponibilité des volumes.</p>
         </div>
 
         <div class="tarifs-grid">
-            <!-- Abattage / Découpe -->
+
+            <!-- BŒUF -->
             <div class="tarif-card scroll-animate">
                 <div class="tarif-card-header">
-                    <h3>Abattage & Découpe</h3>
-                    <p>Prix au kg/carcasse</p>
+                    <h3>🐄 Bœuf</h3>
+                    <p>Prix TTC au kilogramme</p>
                 </div>
                 <div class="tarif-card-body">
                     <table class="tarif-table">
                         <thead>
-                            <tr>
-                                <th>Type</th>
-                                <th style="text-align:right;">Frais</th>
-                                <th style="text-align:right;">Sous vide</th>
-                            </tr>
+                            <tr><th>Morceau</th><th style="text-align:right;">Prix TTC/kg</th></tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="produit">Bœuf / Veau</td>
-                                <td class="prix">1,80 €</td>
-                                <td class="prix">2,30 €</td>
-                            </tr>
-                            <tr>
-                                <td class="produit">Ovin / Caprin</td>
-                                <td class="prix">1,90 €</td>
-                                <td class="prix">2,40 €</td>
-                            </tr>
-                            <tr>
-                                <td class="produit">Porc (+40 kg)</td>
-                                <td class="prix">1,40 €</td>
-                                <td class="prix">1,90 €</td>
-                            </tr>
-                            <tr>
-                                <td class="produit">Porcelet</td>
-                                <td class="prix" colspan="2">41 € pièce (avec saumure)</td>
-                            </tr>
+                            <tr><td class="produit">Haché</td><td class="prix">15 €</td></tr>
+                            <tr><td class="produit">Bourguignon</td><td class="prix">15 €</td></tr>
+                            <tr><td class="produit">Côte</td><td class="prix">26 €</td></tr>
+                            <tr><td class="produit">Entrecôte</td><td class="prix">28 €</td></tr>
+                            <tr><td class="produit">Fondue</td><td class="prix">26 €</td></tr>
+                            <tr><td class="produit">Rumsteak</td><td class="prix">26 €</td></tr>
+                            <tr><td class="produit">Faux-filet</td><td class="prix">28 €</td></tr>
+                            <tr><td class="produit">Steak</td><td class="prix">25 €</td></tr>
+                            <tr><td class="produit">Bavette</td><td class="prix">25 €</td></tr>
+                            <tr><td class="produit">Paleron / Jumeau</td><td class="prix">18 €</td></tr>
+                            <tr><td class="produit">Plat de côtes avec os</td><td class="prix">12 €</td></tr>
+                            <tr><td class="produit">Jarret</td><td class="prix">12 €</td></tr>
+                            <tr><td class="produit">Hampe / Onglet</td><td class="prix">26 €</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- Prestations supplémentaires -->
+            <!-- ABATS BŒUF -->
             <div class="tarif-card scroll-animate">
                 <div class="tarif-card-header">
-                    <h3>Prestations supplémentaires</h3>
-                    <p>Prix au kg/produit fini</p>
+                    <h3>🫀 Abats Bœuf</h3>
+                    <p>Prix TTC au kilogramme</p>
                 </div>
                 <div class="tarif-card-body">
                     <table class="tarif-table">
                         <thead>
-                            <tr>
-                                <th>Prestation</th>
-                                <th style="text-align:right;">Tarif</th>
-                            </tr>
+                            <tr><th>Morceau</th><th style="text-align:right;">Prix TTC/kg</th></tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="produit">Hachage</td>
-                                <td class="prix">2,00 €/kg</td>
-                            </tr>
-                            <tr>
-                                <td class="produit">Saucisse, Chipolatas, Merguez</td>
-                                <td class="prix">4,00 €/kg</td>
-                            </tr>
-                            <tr>
-                                <td class="produit">Congélation</td>
-                                <td class="prix">1,00 €/kg</td>
-                            </tr>
-                            <tr>
-                                <td class="produit">Cartons</td>
-                                <td class="prix">1,00 €/pièce</td>
-                            </tr>
+                            <tr><td class="produit">Joue</td><td class="prix">25 €</td></tr>
+                            <tr><td class="produit">Langues</td><td class="prix">18 €</td></tr>
+                            <tr><td class="produit">Foies / Cœurs / Rognons</td><td class="prix">6 €</td></tr>
+                            <tr><td class="produit">Queues</td><td class="prix">16 €</td></tr>
                         </tbody>
                     </table>
+
+                    <!-- VEAU dans la même card -->
+                    <div style="margin-top: var(--space-md); padding-top: var(--space-md); border-top: 1px solid rgba(255,255,255,0.1);">
+                        <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--blanc-hermine); margin-bottom: var(--space-sm);">🐮 Veau — Prix TTC/kg</h3>
+                        <table class="tarif-table">
+                            <tbody>
+                                <tr><td class="produit">Haché</td><td class="prix">18 €</td></tr>
+                                <tr><td class="produit">Blanquette</td><td class="prix">18 €</td></tr>
+                                <tr><td class="produit">Escalope</td><td class="prix">24 €</td></tr>
+                                <tr><td class="produit">Rôti quasi</td><td class="prix">26 €</td></tr>
+                                <tr><td class="produit">Jarret</td><td class="prix">20 €</td></tr>
+                                <tr><td class="produit">Côte</td><td class="prix">28 €</td></tr>
+                                <tr><td class="produit">Filet</td><td class="prix">30 €</td></tr>
+                                <tr><td class="produit">Tendron</td><td class="prix">18 €</td></tr>
+                                <tr><td class="produit">Langues</td><td class="prix">18 €</td></tr>
+                                <tr><td class="produit">Joues</td><td class="prix">10 €</td></tr>
+                                <tr><td class="produit">Foies</td><td class="prix">24 €</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
-            <!-- PAD & Semi-Parée -->
+            <!-- PORC -->
             <div class="tarif-card highlight scroll-animate">
                 <div class="tarif-card-header">
-                    <h3>Tarifs PAD & Semi-Parée</h3>
-                    <p>Bête entière ou demi-bête uniquement</p>
+                    <h3>🐷 Porc</h3>
+                    <p>Prix TTC au kilogramme</p>
                 </div>
                 <div class="tarif-card-body">
                     <table class="tarif-table">
                         <thead>
-                            <tr>
-                                <th>Prestation</th>
-                                <th style="text-align:right;">Tarif</th>
-                            </tr>
+                            <tr><th>Morceau</th><th style="text-align:right;">Prix TTC/kg</th></tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="produit">
-                                    <strong>PAD</strong> (Prêt à Découper)<br>
-                                    <small style="color: var(--gris-pierre);">Dégraissée et dénervée</small>
-                                </td>
-                                <td class="prix">1,00 €/kg</td>
-                            </tr>
-                            <tr>
-                                <td class="produit">
-                                    <strong>SP</strong> (Semi-Paré)<br>
-                                    <small style="color: var(--gris-pierre);">Désossée, non dénervée, dégraissage sommaire</small>
-                                </td>
-                                <td class="prix">0,80 €/kg</td>
-                            </tr>
+                            <tr><td class="produit">Échine</td><td class="prix">11 €</td></tr>
+                            <tr><td class="produit">Côte</td><td class="prix">11 €</td></tr>
+                            <tr><td class="produit">Grillade</td><td class="prix">14 €</td></tr>
+                            <tr><td class="produit">Poitrine</td><td class="prix">9 €</td></tr>
+                            <tr><td class="produit">Palette avec os</td><td class="prix">9 €</td></tr>
+                            <tr><td class="produit">Rôti échine / filet</td><td class="prix">13 €</td></tr>
+                            <tr><td class="produit">Filet mignon</td><td class="prix">18 €</td></tr>
+                            <tr><td class="produit">Sauté</td><td class="prix">10 €</td></tr>
+                            <tr><td class="produit">Ribs</td><td class="prix">8,50 €</td></tr>
+                            <tr><td class="produit">Jarret</td><td class="prix">8,50 €</td></tr>
+                            <tr><td class="produit">Rouelle</td><td class="prix">11 €</td></tr>
+                            <tr><td class="produit">Chipos</td><td class="prix">9 €</td></tr>
+                            <tr><td class="produit">Saucisse de Toulouse</td><td class="prix">9 €</td></tr>
+                            <tr><td class="produit">Gorges</td><td class="prix">9 €</td></tr>
+                            <tr><td class="produit">Joues</td><td class="prix">18 €</td></tr>
+                            <tr><td class="produit">Foies</td><td class="prix">6 €</td></tr>
+                            <tr><td class="produit">Barde</td><td class="prix">10 €</td></tr>
                         </tbody>
                     </table>
-                    <p class="tarif-note">Prix HT au kg carcasse, hors frais d'abattage</p>
+                </div>
+            </div>
+
+            <!-- AGNEAU -->
+            <div class="tarif-card highlight scroll-animate">
+                <div class="tarif-card-header">
+                    <h3>🐑 Agneau</h3>
+                    <p>Prix TTC au kilogramme</p>
+                </div>
+                <div class="tarif-card-body">
+                    <table class="tarif-table">
+                        <thead>
+                            <tr><th>Morceau</th><th style="text-align:right;">Prix TTC/kg</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="produit">Épaule</td><td class="prix">25 €</td></tr>
+                            <tr><td class="produit">Gigot</td><td class="prix">28 €</td></tr>
+                            <tr><td class="produit">Collier</td><td class="prix">18 €</td></tr>
+                            <tr><td class="produit">Poitrine</td><td class="prix">16 €</td></tr>
+                            <tr><td class="produit">Côtes découvertes</td><td class="prix">25 €</td></tr>
+                            <tr><td class="produit">Côtes premières</td><td class="prix">30 €</td></tr>
+                            <tr><td class="produit">Côtes filets</td><td class="prix">28 €</td></tr>
+                            <tr><td class="produit">Selle</td><td class="prix">28 €</td></tr>
+                            <tr><td class="produit">Merguez</td><td class="prix">14 €</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PRESTATIONS OFFERTES MIS EN AVANT -->
+        <div class="prestations-offertes-banner scroll-animate">
+            <div class="prestations-offertes-inner">
+                <div class="offerte-item">
+                    <div class="offerte-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="offerte-texte">
+                        <span class="offerte-label">Inclus & Offert</span>
+                        <span class="offerte-nom">Mise sous vide</span>
+                    </div>
+                    <div class="offerte-prix">OFFERT</div>
+                </div>
+                <div class="offerte-separateur">✦</div>
+                <div class="offerte-item">
+                    <div class="offerte-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3"/><rect x="7" y="7" width="10" height="10" rx="1"/></svg>
+                    </div>
+                    <div class="offerte-texte">
+                        <span class="offerte-label">Inclus & Offert</span>
+                        <span class="offerte-nom">Congélation</span>
+                    </div>
+                    <div class="offerte-prix">OFFERT</div>
                 </div>
             </div>
         </div>
@@ -1610,10 +725,7 @@
         <div class="contact-list">
             <div class="contact-item scroll-animate">
                 <div class="contact-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                        <circle cx="12" cy="10" r="3"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <div class="contact-details">
                     <h4>Adresse</h4>
@@ -1623,22 +735,17 @@
 
             <div class="contact-item scroll-animate">
                 <div class="contact-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 </div>
                 <div class="contact-details">
                     <h4>Téléphone</h4>
-                    <p><a href="tel:0298210899">02 98 21 08 99</a></p>
+                    <p><a href="tel:0298210348">02.98.21.03.48</a></p>
                 </div>
             </div>
 
             <div class="contact-item scroll-animate">
                 <div class="contact-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </div>
                 <div class="contact-details">
                     <h4>Email</h4>
@@ -1657,24 +764,15 @@
         <div class="map-container scroll-animate-scale">
             <div class="map-overlay">
                 <h4>Boucherie Armoricaine</h4>
-                <p>
-                    23 rue d'Arvor<br>
-                    29260 Lesneven<br>
-                    Finistère, Bretagne
-                </p>
+                <p>23 rue d'Arvor<br>29260 Lesneven<br>Finistère, Bretagne</p>
                 <a href="https://www.google.com/maps/dir//23+Rue+d'Arvor,+29260+Lesneven" target="_blank" rel="noopener" class="map-btn">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                        <circle cx="12" cy="10" r="3"/>
-                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                     Itinéraire
                 </a>
             </div>
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2641.6534!2d-4.3227!3d48.5739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4816c7c9f7a1e5c7%3A0x5c8e9e4c5d1f2a3b!2s23%20Rue%20d&#39;Arvor%2C%2029260%20Lesneven!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 title="Localisation Boucherie Armoricaine - Lesneven">
             </iframe>
         </div>
@@ -1703,9 +801,7 @@
 
     <!-- BULLE CONTACT FLOTTANTE -->
     <button id="contact-bubble" aria-label="Ouvrir le formulaire de contact" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     </button>
 
     <!-- FORMULAIRE DE CONTACT -->
@@ -1719,30 +815,24 @@
             <form action="https://formspree.io/f/xjggrpbg" method="POST">
                 <label for="form-name">Nom</label>
                 <input type="text" id="form-name" name="name" placeholder="Votre nom" required>
-
                 <label for="form-email">Email</label>
                 <input type="email" id="form-email" name="email" placeholder="votre@email.com" required>
-
                 <label for="form-phone">Téléphone</label>
                 <input type="tel" id="form-phone" name="phone" placeholder="06 00 00 00 00">
-
                 <label for="form-message">Message</label>
                 <textarea id="form-message" name="message" placeholder="Votre message..." required></textarea>
-
                 <button type="submit">Envoyer le message</button>
             </form>
         </div>
     </div>
 
     <script>
-        // Menu mobile
         function toggleMenu() {
             document.getElementById('nav').classList.toggle('active');
             document.getElementById('menuToggle').classList.toggle('active');
             document.getElementById('menuOverlay').classList.toggle('active');
             document.body.style.overflow = document.getElementById('nav').classList.contains('active') ? 'hidden' : '';
         }
-
         function closeMenu() {
             document.getElementById('nav').classList.remove('active');
             document.getElementById('menuToggle').classList.remove('active');
@@ -1750,13 +840,11 @@
             document.body.style.overflow = '';
         }
 
-        // Bulle formulaire de contact
         (function () {
             var bubble = document.getElementById('contact-bubble');
             var form = document.getElementById('contact-form');
             var closeBtn = document.getElementById('close-form');
             if(!bubble || !form || !closeBtn) return;
-
             function toggle(open){
                 var isOpen = typeof open === 'boolean' ? open : form.style.display !== 'block';
                 form.style.display = isOpen ? 'block' : 'none';
@@ -1765,67 +853,30 @@
             bubble.addEventListener('click', function(){ toggle(true); });
             closeBtn.addEventListener('click', function(){ toggle(false); });
             document.addEventListener('click', function(e){
-                if(!form.contains(e.target) && e.target !== bubble && !bubble.contains(e.target)){ 
-                    toggle(false); 
-                }
+                if(!form.contains(e.target) && e.target !== bubble && !bubble.contains(e.target)){ toggle(false); }
             });
         })();
 
-        // Animation au scroll avec Intersection Observer
         (function() {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px 0px -80px 0px',
-                threshold: 0.1
-            };
-
+            const observerOptions = { root: null, rootMargin: '0px 0px -80px 0px', threshold: 0.1 };
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        // Désactiver l'observation après l'animation
-                        observer.unobserve(entry.target);
-                    }
+                    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
                 });
             }, observerOptions);
-
-            // Observer tous les éléments avec les classes d'animation au scroll
-            const animatedElements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale');
-            animatedElements.forEach(function(el) {
-                observer.observe(el);
-            });
-
-            // Animation échelonnée pour les service-tags
-            const serviceTags = document.querySelectorAll('.service-tag');
-            serviceTags.forEach(function(tag, index) {
-                tag.style.transitionDelay = (index * 0.1) + 's';
-            });
-
-            // Animation échelonnée pour les tarif-cards
-            const tarifCards = document.querySelectorAll('.tarif-card');
-            tarifCards.forEach(function(card, index) {
-                card.style.transitionDelay = (index * 0.15) + 's';
-            });
-
-            // Animation échelonnée pour les contact-items
-            const contactItems = document.querySelectorAll('.contact-item');
-            contactItems.forEach(function(item, index) {
-                item.style.transitionDelay = (index * 0.1) + 's';
-            });
+            document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale').forEach(function(el) { observer.observe(el); });
+            document.querySelectorAll('.service-tag').forEach(function(tag, index) { tag.style.transitionDelay = (index * 0.1) + 's'; });
+            document.querySelectorAll('.tarif-card').forEach(function(card, index) { card.style.transitionDelay = (index * 0.12) + 's'; });
+            document.querySelectorAll('.contact-item').forEach(function(item, index) { item.style.transitionDelay = (index * 0.1) + 's'; });
         })();
 
-        // Smooth scroll amélioré pour les liens d'ancrage
         document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 var target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     var headerHeight = document.querySelector('.header').offsetHeight;
-                    var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
+                    window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - headerHeight, behavior: 'smooth' });
                 }
             });
         });
