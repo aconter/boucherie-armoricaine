@@ -6,8 +6,8 @@
     <title>Boucherie Armoricaine — Abattage & Découpe à Lesneven</title>
     <meta name="description" content="Boucherie Armoricaine à Lesneven (29) - Service d'abattage, découpe et transformation de viandes. Bœuf, porc, agneau. Tarifs professionnels.">
     
-    <link rel="icon" type="image/png" href="/logo-noir.avif">
-    <link rel="apple-touch-icon" href="/logo-noir.avif">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
     
     <meta property="og:title" content="Boucherie Armoricaine — Abattage & Découpe à Lesneven">
     <meta property="og:description" content="Service professionnel d'abattage, découpe et transformation de viandes à Lesneven, Finistère.">
@@ -474,7 +474,8 @@
             </div>
             <nav class="nav" id="nav">
                 <a href="#presentation" onclick="closeMenu()">Présentation</a>
-                <a href="#tarifs-particuliers" onclick="closeMenu()">Tarifs</a>
+                <a href="#tarifs" onclick="closeMenu()">Tarifs Pro</a>
+                <a href="#tarifs-particuliers" onclick="closeMenu()">Colis Particuliers</a>
                 <a href="#contact" onclick="closeMenu()">Contact</a>
             </nav>
             <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
@@ -499,11 +500,14 @@
                 Service professionnel d'abattage, découpe et transformation de viandes pour particuliers et éleveurs. Bœuf, porc, agneau : un travail artisanal de qualité.
             </p>
             <div class="hero-cta">
-                <a href="#tarifs-particuliers" class="btn btn-primary">
-                    Voir nos tarifs
+                <a href="#tarifs" class="btn btn-primary">
+                    Tarifs professionnels
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+                <a href="#tarifs-particuliers" class="btn btn-secondary">
+                    Colis particuliers
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
             </div>
         </div>
     </section>
@@ -539,6 +543,85 @@
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                     Congélation
                 </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARIFS PRO -->
+    <section class="tarifs-section" id="tarifs">
+        <div class="section-header scroll-animate">
+            <p class="section-label">Grille tarifaire 2026</p>
+            <h2 class="section-title">Tarifs Professionnels (HT)</h2>
+        </div>
+
+        <div class="tarifs-grid">
+            <div class="tarif-card scroll-animate">
+                <div class="tarif-card-header">
+                    <h3>Abattage & Découpe</h3>
+                    <p>Prix au kg/carcasse</p>
+                </div>
+                <div class="tarif-card-body">
+                    <table class="tarif-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th style="text-align:right;">Frais</th>
+                                <th style="text-align:right;">Sous vide</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="produit">Bœuf / Veau</td><td class="prix">1,80 €</td><td class="prix">2,30 €</td></tr>
+                            <tr><td class="produit">Ovin / Caprin</td><td class="prix">1,90 €</td><td class="prix">2,40 €</td></tr>
+                            <tr><td class="produit">Porc (+40 kg)</td><td class="prix">1,40 €</td><td class="prix">1,90 €</td></tr>
+                            <tr><td class="produit">Porcelet</td><td class="prix" colspan="2">41 € pièce (avec saumure)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tarif-card scroll-animate">
+                <div class="tarif-card-header">
+                    <h3>Prestations supplémentaires</h3>
+                    <p>Prix au kg/produit fini</p>
+                </div>
+                <div class="tarif-card-body">
+                    <table class="tarif-table">
+                        <thead>
+                            <tr><th>Prestation</th><th style="text-align:right;">Tarif</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="produit">Hachage</td><td class="prix">2,00 €/kg</td></tr>
+                            <tr><td class="produit">Saucisse, Chipolatas, Merguez</td><td class="prix">4,00 €/kg</td></tr>
+                            <tr><td class="produit">Congélation</td><td class="prix">1,00 €/kg</td></tr>
+                            <tr><td class="produit">Cartons</td><td class="prix">1,00 €/pièce</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tarif-card highlight scroll-animate">
+                <div class="tarif-card-header">
+                    <h3>Tarifs PAD & Semi-Parée</h3>
+                    <p>Bête entière ou demi-bête uniquement</p>
+                </div>
+                <div class="tarif-card-body">
+                    <table class="tarif-table">
+                        <thead>
+                            <tr><th>Prestation</th><th style="text-align:right;">Tarif</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="produit"><strong>PAD</strong> (Prêt à Découper)<br><small style="color: var(--gris-pierre);">Dégraissée et dénervée</small></td>
+                                <td class="prix">1,00 €/kg</td>
+                            </tr>
+                            <tr>
+                                <td class="produit"><strong>SP</strong> (Semi-Paré)<br><small style="color: var(--gris-pierre);">Désossée, non dénervée, dégraissage sommaire</small></td>
+                                <td class="prix">0,80 €/kg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="tarif-note">Prix HT au kg carcasse, hors frais d'abattage</p>
+                </div>
             </div>
         </div>
     </section>
