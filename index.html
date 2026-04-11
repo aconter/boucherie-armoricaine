@@ -565,15 +565,15 @@
                         <thead>
                             <tr>
                                 <th>Type</th>
-                                <th style="text-align:right;">Frais</th>
-                                <th style="text-align:right;">Sous vide</th>
+                                <th style="text-align:right;">Tarif</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td class="produit">Bœuf / Veau</td><td class="prix">1,80 €</td><td class="prix">2,30 €</td></tr>
-                            <tr><td class="produit">Ovin / Caprin</td><td class="prix">1,90 €</td><td class="prix">2,40 €</td></tr>
-                            <tr><td class="produit">Porc (+40 kg)</td><td class="prix">1,40 €</td><td class="prix">1,90 €</td></tr>
-                            <tr><td class="produit">Porcelet</td><td class="prix" colspan="2">41 € pièce (avec saumure)</td></tr>
+                            <tr><td class="produit">Bœuf / Veau</td><td class="prix">1,80 €/kg</td></tr>
+                            <tr><td class="produit">Ovin / Caprin</td><td class="prix">1,90 €/kg</td></tr>
+                            <tr><td class="produit">Porc (+40 kg)</td><td class="prix">1,40 €/kg</td></tr>
+                            <tr><td class="produit">Porcelet</td><td class="prix">25 € abattage + 1,50 €/kg saumure</td></tr>
+                            <tr><td class="produit">Forfait destruction os</td><td class="prix">20 € forfait</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -591,8 +591,9 @@
                         </thead>
                         <tbody>
                             <tr><td class="produit">Hachage</td><td class="prix">2,00 €/kg</td></tr>
-                            <tr><td class="produit">Saucisse, Chipolatas, Merguez</td><td class="prix">4,00 €/kg</td></tr>
+                            <tr><td class="produit">Saucisse, Chipolatas, Merguez</td><td class="prix">5,00 €/kg</td></tr>
                             <tr><td class="produit">Congélation</td><td class="prix">1,00 €/kg</td></tr>
+                            <tr><td class="produit">Sac sous vide</td><td class="prix">0,50 €/pièce</td></tr>
                             <tr><td class="produit">Cartons</td><td class="prix">1,00 €/pièce</td></tr>
                         </tbody>
                     </table>
@@ -629,10 +630,10 @@
     <!-- ===== TARIFS PARTICULIERS ===== -->
     <section class="tarifs-particuliers-section" id="tarifs-particuliers">
         <div class="section-header scroll-animate">
-            <div class="section-badge">✦ Février 2026</div>
+            <div class="section-badge">✦ Avril 2026</div>
             <p class="section-label">Vente au détail — Colis particuliers</p>
-            <h2 class="section-title">Tarifs Particuliers (TTC/kg)</h2>
-            <p class="section-note">Prix susceptibles d'évoluer en fonction du cours de la viande. Toute commande est soumise à la disponibilité des volumes.</p>
+            <h2 class="section-title">Les Incontournables (TTC/kg)</h2>
+            <p class="section-note">Il est possible d'avoir plus de choix sur demande en fonction des volumes. Commande possible à partir de 1 kg.</p>
         </div>
 
         <div class="tarifs-grid">
@@ -649,67 +650,18 @@
                             <tr><th>Morceau</th><th style="text-align:right;">Prix TTC/kg</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td class="produit">Haché</td><td class="prix">15 €</td></tr>
-                            <tr><td class="produit">Bourguignon</td><td class="prix">15 €</td></tr>
-                            <tr><td class="produit">Côte</td><td class="prix">26 €</td></tr>
-                            <tr><td class="produit">Entrecôte</td><td class="prix">28 €</td></tr>
-                            <tr><td class="produit">Fondue</td><td class="prix">26 €</td></tr>
-                            <tr><td class="produit">Rumsteak</td><td class="prix">26 €</td></tr>
-                            <tr><td class="produit">Faux-filet</td><td class="prix">28 €</td></tr>
-                            <tr><td class="produit">Steak</td><td class="prix">25 €</td></tr>
-                            <tr><td class="produit">Bavette</td><td class="prix">25 €</td></tr>
-                            <tr><td class="produit">Paleron / Jumeau</td><td class="prix">18 €</td></tr>
-                            <tr><td class="produit">Plat de côtes avec os</td><td class="prix">12 €</td></tr>
-                            <tr><td class="produit">Jarret</td><td class="prix">12 €</td></tr>
+                            <tr><td class="produit">Haché</td><td class="prix">16,90 €</td></tr>
+                            <tr><td class="produit">Bourguignon</td><td class="prix">16,90 €</td></tr>
+                            <tr><td class="produit">Steak (tende de tranche, poire, tranche…)</td><td class="prix">26 €</td></tr>
+                            <tr><td class="produit">Pavé / Fondue</td><td class="prix">26 €</td></tr>
                             <tr><td class="produit">Hampe / Onglet</td><td class="prix">26 €</td></tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- ABATS BŒUF -->
-            <div class="tarif-card scroll-animate">
-                <div class="tarif-card-header">
-                    <h3>🫀 Abats Bœuf</h3>
-                    <p>Prix TTC au kilogramme</p>
-                </div>
-                <div class="tarif-card-body">
-                    <table class="tarif-table">
-                        <thead>
-                            <tr><th>Morceau</th><th style="text-align:right;">Prix TTC/kg</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td class="produit">Joue</td><td class="prix">25 €</td></tr>
-                            <tr><td class="produit">Langues</td><td class="prix">18 €</td></tr>
-                            <tr><td class="produit">Foies / Cœurs / Rognons</td><td class="prix">6 €</td></tr>
-                            <tr><td class="produit">Queues</td><td class="prix">16 €</td></tr>
-                        </tbody>
-                    </table>
-
-                    <!-- VEAU dans la même card -->
-                    <div style="margin-top: var(--space-md); padding-top: var(--space-md); border-top: 1px solid rgba(255,255,255,0.1);">
-                        <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--blanc-hermine); margin-bottom: var(--space-sm);">🐮 Veau — Prix TTC/kg</h3>
-                        <table class="tarif-table">
-                            <tbody>
-                                <tr><td class="produit">Haché</td><td class="prix">18 €</td></tr>
-                                <tr><td class="produit">Blanquette</td><td class="prix">18 €</td></tr>
-                                <tr><td class="produit">Escalope</td><td class="prix">24 €</td></tr>
-                                <tr><td class="produit">Rôti quasi</td><td class="prix">26 €</td></tr>
-                                <tr><td class="produit">Jarret</td><td class="prix">20 €</td></tr>
-                                <tr><td class="produit">Côte</td><td class="prix">28 €</td></tr>
-                                <tr><td class="produit">Filet</td><td class="prix">30 €</td></tr>
-                                <tr><td class="produit">Tendron</td><td class="prix">18 €</td></tr>
-                                <tr><td class="produit">Langues</td><td class="prix">18 €</td></tr>
-                                <tr><td class="produit">Joues</td><td class="prix">10 €</td></tr>
-                                <tr><td class="produit">Foies</td><td class="prix">24 €</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
             <!-- PORC -->
-            <div class="tarif-card highlight scroll-animate">
+            <div class="tarif-card scroll-animate">
                 <div class="tarif-card-header">
                     <h3>🐷 Porc</h3>
                     <p>Prix TTC au kilogramme</p>
@@ -722,47 +674,39 @@
                         <tbody>
                             <tr><td class="produit">Échine</td><td class="prix">11 €</td></tr>
                             <tr><td class="produit">Côte</td><td class="prix">11 €</td></tr>
-                            <tr><td class="produit">Grillade</td><td class="prix">14 €</td></tr>
-                            <tr><td class="produit">Poitrine</td><td class="prix">9 €</td></tr>
-                            <tr><td class="produit">Palette avec os</td><td class="prix">9 €</td></tr>
+                            <tr><td class="produit">Poitrine</td><td class="prix">11 €</td></tr>
                             <tr><td class="produit">Rôti échine / filet</td><td class="prix">13 €</td></tr>
-                            <tr><td class="produit">Filet mignon</td><td class="prix">18 €</td></tr>
-                            <tr><td class="produit">Sauté</td><td class="prix">10 €</td></tr>
-                            <tr><td class="produit">Ribs</td><td class="prix">8,50 €</td></tr>
+                            <tr><td class="produit">Sauté</td><td class="prix">11 €</td></tr>
                             <tr><td class="produit">Jarret</td><td class="prix">8,50 €</td></tr>
-                            <tr><td class="produit">Rouelle</td><td class="prix">11 €</td></tr>
-                            <tr><td class="produit">Chipos</td><td class="prix">9 €</td></tr>
-                            <tr><td class="produit">Saucisse de Toulouse</td><td class="prix">9 €</td></tr>
-                            <tr><td class="produit">Gorges</td><td class="prix">9 €</td></tr>
-                            <tr><td class="produit">Joues</td><td class="prix">18 €</td></tr>
-                            <tr><td class="produit">Foies</td><td class="prix">6 €</td></tr>
-                            <tr><td class="produit">Barde</td><td class="prix">10 €</td></tr>
                         </tbody>
                     </table>
+
+                    <!-- PORCELET dans la même card -->
+                    <div style="margin-top: var(--space-md); padding-top: var(--space-md); border-top: 1px solid rgba(255,255,255,0.1);">
+                        <h3 style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--jaune-accent); margin-bottom: var(--space-sm);">🐽 Porcelet saumuré</h3>
+                        <p style="color: var(--gris-pierre); font-size: 0.9rem; line-height: 1.5;">À partir de 20 kg — <strong style="color: var(--blanc-hermine);">11 €/kg</strong><br><small>Compter 500 g par personne pour un cochon grillé</small></p>
+                    </div>
                 </div>
             </div>
 
-            <!-- AGNEAU -->
+            <!-- SAUCISSERIE -->
             <div class="tarif-card highlight scroll-animate">
                 <div class="tarif-card-header">
-                    <h3>🐑 Agneau</h3>
+                    <h3>🌿 Saucisserie</h3>
                     <p>Prix TTC au kilogramme</p>
                 </div>
                 <div class="tarif-card-body">
                     <table class="tarif-table">
                         <thead>
-                            <tr><th>Morceau</th><th style="text-align:right;">Prix TTC/kg</th></tr>
+                            <tr><th>Produit</th><th style="text-align:right;">Prix TTC/kg</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td class="produit">Épaule</td><td class="prix">25 €</td></tr>
-                            <tr><td class="produit">Gigot</td><td class="prix">28 €</td></tr>
-                            <tr><td class="produit">Collier</td><td class="prix">18 €</td></tr>
-                            <tr><td class="produit">Poitrine</td><td class="prix">16 €</td></tr>
-                            <tr><td class="produit">Côtes découvertes</td><td class="prix">25 €</td></tr>
-                            <tr><td class="produit">Côtes premières</td><td class="prix">30 €</td></tr>
-                            <tr><td class="produit">Côtes filets</td><td class="prix">28 €</td></tr>
-                            <tr><td class="produit">Selle</td><td class="prix">28 €</td></tr>
-                            <tr><td class="produit">Merguez</td><td class="prix">14 €</td></tr>
+                            <tr><td class="produit">Chipolatas</td><td class="prix">12 €</td></tr>
+                            <tr><td class="produit">Saucisses de Toulouse</td><td class="prix">12 €</td></tr>
+                            <tr><td class="produit">Saucisses aux herbes</td><td class="prix">13 €</td></tr>
+                            <tr><td class="produit">Saucisses échalotes</td><td class="prix">13 €</td></tr>
+                            <tr><td class="produit">Saucisses piments d'Espelette</td><td class="prix">13 €</td></tr>
+                            <tr><td class="produit">Merguez</td><td class="prix">15 €</td></tr>
                         </tbody>
                     </table>
                 </div>
