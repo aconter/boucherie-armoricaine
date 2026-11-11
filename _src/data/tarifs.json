@@ -1,0 +1,99 @@
+{
+  "_lisez_moi": "Source unique des tarifs du site. Modifier ici puis lancer `npm run build`. Ne jamais changer un prix sans validation du responsable. Mettre a jour `mise_a_jour` a chaque changement.",
+  "professionnels": {
+    "titre": "Tarifs professionnels",
+    "taxe": "HT",
+    "mise_a_jour": "avril 2026",
+    "grilles": [
+      {
+        "id": "abattage-decoupe",
+        "titre": "Abattage et découpe",
+        "unite": "Prix HT au kg carcasse",
+        "lignes": [
+          { "libelle": "Bœuf / Veau", "prix": "1,80 €/kg" },
+          { "libelle": "Ovin / Caprin", "prix": "1,90 €/kg" },
+          { "libelle": "Porc (+40 kg)", "prix": "1,40 €/kg" },
+          { "libelle": "Porcelet", "prix": "25 € abattage + 1,50 €/kg saumure" },
+          { "libelle": "Forfait destruction os", "prix": "20 € forfait" }
+        ]
+      },
+      {
+        "id": "supplements",
+        "titre": "Prestations supplémentaires",
+        "unite": "Prix HT au kg de produit fini ou à la pièce",
+        "lignes": [
+          { "libelle": "Hachage", "prix": "2,00 €/kg" },
+          { "libelle": "Saucisse, chipolatas, merguez", "prix": "5,00 €/kg" },
+          { "libelle": "Congélation", "prix": "1,00 €/kg" },
+          { "libelle": "Sac sous vide", "prix": "0,50 €/pièce" },
+          { "libelle": "Cartons", "prix": "1,00 €/pièce" }
+        ]
+      },
+      {
+        "id": "pad-semi-pare",
+        "titre": "PAD et semi-paré",
+        "unite": "Bête entière ou demi-bête uniquement",
+        "lignes": [
+          { "libelle": "PAD (prêt à découper)", "detail": "Dégraissée et dénervée", "prix": "1,00 €/kg" },
+          { "libelle": "SP (semi-paré)", "detail": "Désossée, non dénervée, dégraissage sommaire", "prix": "0,80 €/kg" }
+        ],
+        "note": "Prix HT au kg carcasse, hors frais d'abattage."
+      }
+    ]
+  },
+  "particuliers": {
+    "titre": "Colis de viande : les incontournables",
+    "taxe": "TTC",
+    "mise_a_jour": "avril 2026",
+    "conditions": "Commande possible à partir de 1 kg. Plus de choix possible sur demande, en fonction des volumes.",
+    "offerts": ["Mise sous vide", "Congélation"],
+    "grilles": [
+      {
+        "id": "boeuf",
+        "titre": "Bœuf",
+        "unite": "Prix TTC au kilo",
+        "lignes": [
+          { "libelle": "Haché", "prix": "16,90 €/kg" },
+          { "libelle": "Bourguignon", "prix": "16,90 €/kg" },
+          { "libelle": "Steak (tende de tranche, poire, tranche…)", "prix": "26 €/kg" },
+          { "libelle": "Pavé / Fondue", "prix": "26 €/kg" },
+          { "libelle": "Hampe / Onglet", "prix": "26 €/kg" }
+        ]
+      },
+      {
+        "id": "porc",
+        "titre": "Porc",
+        "unite": "Prix TTC au kilo",
+        "lignes": [
+          { "libelle": "Échine", "prix": "11 €/kg" },
+          { "libelle": "Côte", "prix": "11 €/kg" },
+          { "libelle": "Poitrine", "prix": "11 €/kg" },
+          { "libelle": "Rôti échine / filet", "prix": "13 €/kg" },
+          { "libelle": "Sauté", "prix": "11 €/kg" },
+          { "libelle": "Jarret", "prix": "8,50 €/kg" }
+        ]
+      },
+      {
+        "id": "saucisserie",
+        "titre": "Saucisserie",
+        "unite": "Prix TTC au kilo",
+        "lignes": [
+          { "libelle": "Chipolatas", "prix": "12 €/kg" },
+          { "libelle": "Saucisses de Toulouse", "prix": "12 €/kg" },
+          { "libelle": "Saucisses aux herbes", "prix": "13 €/kg" },
+          { "libelle": "Saucisses échalotes", "prix": "13 €/kg" },
+          { "libelle": "Saucisses piment d'Espelette", "prix": "13 €/kg" },
+          { "libelle": "Merguez", "prix": "15 €/kg" }
+        ]
+      },
+      {
+        "id": "porcelet",
+        "titre": "Porcelet saumuré",
+        "unite": "Prix TTC au kilo, à partir de 20 kg",
+        "lignes": [
+          { "libelle": "Porcelet saumuré", "detail": "Compter 500 g par personne pour un cochon grillé", "prix": "11 €/kg" }
+        ]
+      }
+    ]
+  }
+}

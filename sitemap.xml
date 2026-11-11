@@ -2,22 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://boucheriearmoricaine.com/</loc>
-    <lastmod>2026-10-26</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
-    <loc>https://boucheriearmoricaine.com/decoupe-viande-particuliers/</loc>
-    <lastmod>2026-10-26</lastmod>
-    <priority>0.9</priority>
+    <loc>https://boucheriearmoricaine.com/decoupe-cochon/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://boucheriearmoricaine.com/colis-de-viande/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://boucheriearmoricaine.com/contact/</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://boucheriearmoricaine.com/abattage-decoupe-eleveurs/</loc>
-    <lastmod>2026-10-26</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://boucheriearmoricaine.com/faq/</loc>
-    <lastmod>2026-10-26</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://boucheriearmoricaine.com/decoupe-viande-particuliers/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://boucheriearmoricaine.com/tarifs/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://boucheriearmoricaine.com/zone-intervention/</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
 </urlset>

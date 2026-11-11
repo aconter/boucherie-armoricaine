@@ -1,0 +1,9 @@
+{
+  "name": "boucherie-armoricaine",
+  "private": true,
+  "type": "module",
+  "description": "Site statique de la Boucherie Armoricaine (Lesneven). Sources dans _src/, pages générées à la racine.",
+  "scripts": {
+    "build": "node _src/build.mjs"
+  }
+}

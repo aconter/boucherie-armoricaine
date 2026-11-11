@@ -1,0 +1,15 @@
+# Configuration GitHub Pages (Jekyll).
+# Les pages HTML sont générées par `npm run build` et publiées telles quelles.
+# Les dossiers commençant par "_" (dont _src/) sont ignorés par Jekyll.
+# Fichiers internes à ne pas publier :
+exclude:
+  - README.md
+  - AUDIT_INITIAL.md
+  - PLAN_ACTIONS.md
+  - STRATEGIE_SEO.md
+  - STRATEGIE_LOCALE.md
+  - RAPPORT_FINAL.md
+  - TESTS_EFFECTUES.md
+  - package.json
+  - tests
+  - "Audit SEO Boucherie Armoricaine.docx"
