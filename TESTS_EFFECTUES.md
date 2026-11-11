@@ -68,6 +68,13 @@ Non testé : le comportement réel de Formspree (réception de l'email, filtre a
 - Console : aucune erreur sur l'accueil ni sur la page contact.
 - Widget d'avis Trustindex : chargé sans erreur, mais son contenu n'a pas pu être vérifié en local (il est probablement limité au domaine de production).
 
+## 6 bis. Pages de zones (11/11/2026, après mise en ligne de la refonte)
+
+- Vérification statique : 19 pages, 592 liens internes, 17 URL dans le sitemap, 0 erreur.
+- Lighthouse mobile : `/zone-intervention/` et `/zone-intervention/centre-et-sud-finistere/` à 100 / 100 / 100.
+- Débordement horizontal : aucun sur les 9 pages de zones, à 320, 390, 768 et 1280 px.
+- Capture mobile examinée : `/zone-intervention/pays-des-abers/` (en-tête et tableau des communes).
+
 ## 7. Non réalisé
 
 - Firefox, Safari, Edge : non testés (seul Chrome était piloté dans cet environnement).

@@ -15,7 +15,8 @@ const fichiers = (await readdir(join(ici, 'pages'))).filter((f) => f.endsWith('.
 const pages = [];
 for (const f of fichiers) {
   const mod = await import(pathToFileURL(join(ici, 'pages', f)).href);
-  pages.push(mod.default);
+  // Un module peut exporter une page ou une liste de pages (pages de zones).
+  pages.push(...[mod.default].flat());
 }
 
 const urls = new Set();

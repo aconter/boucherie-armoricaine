@@ -43,6 +43,28 @@ Section `#eleveurs` de `/zone-intervention/` et page `/abattage-decoupe-eleveurs
 - Ajouter les trois départements dans `areaServed` du `Service` éleveurs.
 - Ne créer une page par département que si les conditions diffèrent réellement (par exemple transport organisé depuis un département).
 
+## 3 bis. Mise en œuvre (11/11/2026)
+
+Pages par **bassin de vie** (communauté de communes), et non par commune. Chaque page contient des données propres, donc pas de contenu dupliqué : la liste officielle des communes (geo.api.gouv.fr), la distance et le temps de route de chaque commune jusqu'à l'atelier (OSRM / OpenStreetMap), l'itinéraire principal depuis la ville centre, et un texte d'introduction spécifique.
+
+| URL | Communes | Statut |
+|---|---|---|
+| `/zone-intervention/` | Hub : Finistère Nord, Centre et Sud, Bretagne | |
+| `/zone-intervention/pays-de-lesneven-cote-des-legendes/` | 14 | Clients et éleveurs confirmés |
+| `/zone-intervention/pays-des-abers/` | 13 | Clients et éleveurs confirmés |
+| `/zone-intervention/brest-iroise/` | 26 (hors îles) | Clients confirmés |
+| `/zone-intervention/landerneau-daoulas/` | 22 | Clients et éleveurs confirmés |
+| `/zone-intervention/landivisiau-haut-leon/` | 32 (hors île de Batz) | Clients et éleveurs confirmés |
+| `/zone-intervention/pays-de-morlaix/` | 26 | Aucune clientèle revendiquée, « appelez avant de venir » |
+| `/zone-intervention/centre-et-sud-finistere/` | 143 (13 intercommunalités, hors île de Sein) | Idem |
+| `/zone-intervention/bretagne-eleveurs/` | 10 villes des Côtes-d'Armor et du Morbihan | Éleveurs : « appelez pour vérifier si c'est possible et à quelles conditions » |
+
+Le balisage `Service` avec `areaServed` (liste des communes) n'est posé que sur les 5 bassins où la clientèle est confirmée.
+
+Données : `_src/data/zones.json`, régénérable avec `python -I _src/outils/calcul-distances.py`. Les temps de route sont indicatifs et l'indiquent sur chaque page.
+
+**À faire dès que le responsable confirme** l'accueil des éleveurs des Côtes-d'Armor et du Morbihan (ou de particuliers du Sud Finistère) : remplacer les formulations prudentes par les conditions réelles (transport, volumes, jours).
+
 ## 4. Google Business Profile (recommandations, aucune action effectuée)
 
 1. Doublon « Atelier de découpe Vivien » (même adresse, même téléphone) : faire confirmer par le responsable puis demander la fermeture ou la fusion via le support Google.

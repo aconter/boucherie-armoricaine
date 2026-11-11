@@ -20,7 +20,9 @@ Date : 11 novembre 2026. Branche Git : `refonte`. **Non publié** : rien n'est c
 | `/colis-de-viande/` | **Nouvelle** (remplace l'ancre `/#tarifs-particuliers`) | Prix TTC, offerts, comment commander |
 | `/abattage-decoupe-eleveurs/` | Refaite (URL conservée) | Déroulé, PAD / semi-paré, tarifs HT, devis |
 | `/tarifs/` | **Nouvelle** | Grilles HT et TTC séparées, date de mise à jour |
-| `/zone-intervention/` | **Nouvelle** | Bassins de vie du Nord Finistère, section éleveurs |
+| `/zone-intervention/` | **Nouvelle**, refaite le 11/11 | Hub Finistère Nord, Centre et Sud, Bretagne |
+| `/zone-intervention/<bassin>/` (7 pages) | **Nouvelles** (11/11) | Par bassin : communes officielles, distance et temps de route par commune, itinéraire. Voir `STRATEGIE_LOCALE.md` |
+| `/zone-intervention/bretagne-eleveurs/` | **Nouvelle** (11/11) | Éleveurs 22 et 56 : temps de route, sans promesse d'accueil |
 | `/faq/` | Refaite (URL conservée) | 12 questions (3 nouvelles), liens vers les pages |
 | `/contact/` | **Nouvelle** | Téléphone, adresse, horaires, deux formulaires, plan |
 | `/mentions-legales/` | Ajoutée au dépôt | `noindex`, **champs à compléter** |

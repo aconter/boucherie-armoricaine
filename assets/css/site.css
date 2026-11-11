@@ -325,3 +325,19 @@ strong { font-weight: 700; }
   .ardoise { background: #fff; color: #000; border-color: #000; }
   .ardoise td, .ardoise h3 { color: #000; }
 }
+
+/* ---------- Pages de zones ---------- */
+.bassin h3 a { color: var(--texte); text-decoration-color: var(--bordeaux); }
+.bassin h3 a:hover { color: var(--bordeaux); }
+.table-defilante { overflow-x: auto; margin-block: 1rem 1.5rem; }
+.table-communes { width: 100%; max-width: 44rem; border-collapse: collapse; background: var(--papier); font-variant-numeric: tabular-nums; }
+.table-communes caption { text-align: left; font-weight: 700; padding-bottom: .5rem; }
+.table-communes th, .table-communes td { padding: .5rem .75rem; border-bottom: 1px solid var(--filet); text-align: left; }
+.table-communes thead th { background: var(--ardoise); color: var(--craie); font-weight: 600; }
+.table-communes tbody th { font-weight: 600; }
+.table-communes td { white-space: nowrap; }
+.groupe-communes { border-bottom: 1px solid var(--filet); }
+.groupe-communes summary { cursor: pointer; padding: .9rem 0; font-weight: 700; color: var(--bordeaux); }
+.note-source { font-size: .88rem; color: var(--texte-doux); max-width: var(--mesure); }
+.liens-colonnes { list-style: none; padding: 0; columns: 16rem; column-gap: 2rem; }
+.liens-colonnes li { padding: .3rem 0; break-inside: avoid; }
